@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+        <array key="SF-Compact-Rounded-Regular.otf">
+            <string>SFCompactRounded-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Пациенты-->
         <scene sceneID="N4d-8t-exF">
@@ -17,15 +25,125 @@
                     <view key="view" contentMode="scaleToFill" id="ygx-lc-Q56">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TbZ-Nw-7cA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PatientItemCell" rowHeight="158" id="oyc-9r-hWh" customClass="PatientItemCell" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="158"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyc-9r-hWh" id="Hs0-L8-uLx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWV-7D-cGS" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                    <rect key="frame" x="13" y="3" width="388" height="146"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-s0-TPV" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                            <rect key="frame" x="13" y="10" width="76" height="76"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.29999999999999999"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="jzL-89-T8X" customClass="RoundedImageView" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                            <rect key="frame" x="13" y="10" width="76" height="76"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="jzL-89-T8X" secondAttribute="height" id="smo-Vz-h6j"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ирина Иванова" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-7w-EvK">
+                                                            <rect key="frame" x="102" y="10" width="273" height="23"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="23" id="QPH-Vf-nRO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остеохандроз, дегенеративно-дистрофическое мультифакториальное, хроническое, рецидивирующее заболевание" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="65M-E8-l8t">
+                                                            <rect key="frame" x="102" y="41" width="273" height="97"/>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                            <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="fRP-s0-TPV" firstAttribute="trailing" secondItem="jzL-89-T8X" secondAttribute="trailing" id="Bmo-Az-pZV"/>
+                                                        <constraint firstItem="65M-E8-l8t" firstAttribute="leading" secondItem="jzL-89-T8X" secondAttribute="trailing" constant="13" id="Bmq-cE-j2g"/>
+                                                        <constraint firstItem="fRP-s0-TPV" firstAttribute="bottom" secondItem="jzL-89-T8X" secondAttribute="bottom" id="G3a-Eg-g9z"/>
+                                                        <constraint firstItem="hTM-7w-EvK" firstAttribute="leading" secondItem="65M-E8-l8t" secondAttribute="leading" id="UsA-8C-NGZ"/>
+                                                        <constraint firstItem="fRP-s0-TPV" firstAttribute="top" secondItem="jzL-89-T8X" secondAttribute="top" id="bGt-AQ-1Mz"/>
+                                                        <constraint firstItem="65M-E8-l8t" firstAttribute="width" secondItem="JWV-7D-cGS" secondAttribute="width" multiplier="244:347" id="cV5-e1-3lK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="65M-E8-l8t" secondAttribute="trailing" constant="13" id="hCa-Xz-V2G"/>
+                                                        <constraint firstItem="jzL-89-T8X" firstAttribute="leading" secondItem="JWV-7D-cGS" secondAttribute="leading" constant="13" id="iVi-HQ-mqe"/>
+                                                        <constraint firstItem="hTM-7w-EvK" firstAttribute="top" secondItem="JWV-7D-cGS" secondAttribute="top" constant="10" id="jsd-xg-NLd"/>
+                                                        <constraint firstItem="fRP-s0-TPV" firstAttribute="leading" secondItem="jzL-89-T8X" secondAttribute="leading" id="kAS-9m-tn1"/>
+                                                        <constraint firstAttribute="height" constant="146" id="l9J-uH-Hhi"/>
+                                                        <constraint firstItem="jzL-89-T8X" firstAttribute="top" secondItem="JWV-7D-cGS" secondAttribute="top" constant="10" id="q9T-A0-YjI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="65M-E8-l8t" secondAttribute="bottom" constant="8" id="uMa-1e-KOh"/>
+                                                        <constraint firstItem="65M-E8-l8t" firstAttribute="top" secondItem="hTM-7w-EvK" secondAttribute="bottom" constant="8" id="ucl-eG-pZS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hTM-7w-EvK" secondAttribute="trailing" constant="13" id="x64-nu-Gsk"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JWV-7D-cGS" firstAttribute="leading" secondItem="Hs0-L8-uLx" secondAttribute="leading" constant="13" id="Dtd-JD-x6Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="JWV-7D-cGS" secondAttribute="trailing" constant="13" id="Hck-hX-u7S"/>
+                                                <constraint firstItem="JWV-7D-cGS" firstAttribute="top" secondItem="Hs0-L8-uLx" secondAttribute="top" constant="3" id="XOH-Xw-EzE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagePatient" destination="jzL-89-T8X" id="G4U-BO-rK5"/>
+                                            <outlet property="labDescribtion" destination="65M-E8-l8t" id="vqd-79-6p2"/>
+                                            <outlet property="labName" destination="hTM-7w-EvK" id="lzL-tS-uTk"/>
+                                            <segue destination="kJw-11-ySI" kind="show" id="986-3U-Z2U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n2k-ai-Pla" id="EyG-BU-u9y"/>
+                                    <outlet property="delegate" destination="n2k-ai-Pla" id="paT-Xb-RRz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Sp-N9-VdA" firstAttribute="bottom" secondItem="TbZ-Nw-7cA" secondAttribute="bottom" id="MAy-HD-PoN"/>
+                            <constraint firstItem="TbZ-Nw-7cA" firstAttribute="top" secondItem="0Sp-N9-VdA" secondAttribute="top" id="hLU-yY-tHE"/>
+                            <constraint firstItem="0Sp-N9-VdA" firstAttribute="trailing" secondItem="TbZ-Nw-7cA" secondAttribute="trailing" id="lDH-Lm-Dvv"/>
+                            <constraint firstItem="TbZ-Nw-7cA" firstAttribute="leading" secondItem="0Sp-N9-VdA" secondAttribute="leading" id="ndd-zT-URZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Sp-N9-VdA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Пациенты" image="Чат иконка" id="so4-5m-hs3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="TbZ-Nw-7cA" id="kAW-6u-e4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wl7-gd-b1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="65"/>
+            <point key="canvasLocation" x="553.62318840579712" y="64.955357142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X9N-4x-SRB">
@@ -44,6 +162,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Девушка фото" width="112" height="112"/>
         <image name="Чат иконка" width="24" height="24"/>
     </resources>
 </document>

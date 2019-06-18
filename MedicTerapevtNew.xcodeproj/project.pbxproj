@@ -48,6 +48,9 @@
 		AC1E5E3822B8D77C00B7E09D /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5E2F22B8D77C00B7E09D /* SF-Compact-Rounded-Black.otf */; };
 		AC1E5E3922B8D77C00B7E09D /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5E3022B8D77C00B7E09D /* SF-Compact-Rounded-Bold.otf */; };
 		AC1E5E3A22B8D77C00B7E09D /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5E3122B8D77C00B7E09D /* SF-Compact-Rounded-Thin.otf */; };
+		AC1E5E3C22B8DC9E00B7E09D /* PatientsTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E3B22B8DC9E00B7E09D /* PatientsTableview.swift */; };
+		AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */; };
+		AC1E5E4122B8DDDA00B7E09D /* PatientItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E4022B8DDDA00B7E09D /* PatientItemCell.swift */; };
 		FF5F0671B3ECF11323AFFC83 /* Pods_MedicTerapevtNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,9 @@
 		AC1E5E2F22B8D77C00B7E09D /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		AC1E5E3022B8D77C00B7E09D /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		AC1E5E3122B8D77C00B7E09D /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
+		AC1E5E3B22B8DC9E00B7E09D /* PatientsTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsTableview.swift; sourceTree = "<group>"; };
+		AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientItem.swift; sourceTree = "<group>"; };
+		AC1E5E4022B8DDDA00B7E09D /* PatientItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientItemCell.swift; sourceTree = "<group>"; };
 		DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicTerapevtNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,7 +276,10 @@
 		AC1E5E2022B8D5BF00B7E09D /* Patients */ = {
 			isa = PBXGroup;
 			children = (
+				AC1E5E3D22B8DCF800B7E09D /* Model */,
 				AC1E5E2122B8D5D600B7E09D /* PatientsVC.swift */,
+				AC1E5E3B22B8DC9E00B7E09D /* PatientsTableview.swift */,
+				AC1E5E4022B8DDDA00B7E09D /* PatientItemCell.swift */,
 			);
 			path = Patients;
 			sourceTree = "<group>";
@@ -298,6 +307,14 @@
 				AC1E5E3122B8D77C00B7E09D /* SF-Compact-Rounded-Thin.otf */,
 			);
 			path = "Шрифты";
+			sourceTree = "<group>";
+		};
+		AC1E5E3D22B8DCF800B7E09D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DA7EF809C5D5DFF1B2B62AC3 /* Frameworks */ = {
@@ -469,9 +486,11 @@
 				AC1E5E2722B8D69200B7E09D /* GradientLayerExtension.swift in Sources */,
 				AC1E5E0922B8CCEE00B7E09D /* EnterService.swift in Sources */,
 				AC1E5E0722B8CCEE00B7E09D /* Gradient.swift in Sources */,
+				AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */,
 				AC1E5E0022B8CCEE00B7E09D /* RegistrationView.swift in Sources */,
 				AC1E5DCA22B8CC4A00B7E09D /* AppDelegate.swift in Sources */,
 				AC1E5E0C22B8CCEE00B7E09D /* RegistrationService.swift in Sources */,
+				AC1E5E3C22B8DC9E00B7E09D /* PatientsTableview.swift in Sources */,
 				AC1E5E0A22B8CCEE00B7E09D /* Colors.swift in Sources */,
 				AC1E5E2422B8D64400B7E09D /* GradientNavigationBar.swift in Sources */,
 				AC1E5DF922B8CCEE00B7E09D /* WaveGradientView.swift in Sources */,
@@ -481,6 +500,7 @@
 				AC1E5DFA22B8CCEE00B7E09D /* ButtonGradient.swift in Sources */,
 				AC1E5DFE22B8CCEE00B7E09D /* ForgotPasswordService.swift in Sources */,
 				AC1E5E0422B8CCEE00B7E09D /* ViewUnderTextFields.swift in Sources */,
+				AC1E5E4122B8DDDA00B7E09D /* PatientItemCell.swift in Sources */,
 				AC1E5E0D22B8CCEE00B7E09D /* TokenService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

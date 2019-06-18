@@ -11,12 +11,30 @@ import UIKit
 class PatientsVC: UIViewController {
     
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var patients: [PatientItem] = []
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setNavigationBar()
+        
+        fetchPatients()
+        tableView.reloadData()
+    }
+    
+    
+    private func fetchPatients() {
+        
+        patients = [PatientItem(name: "Геннадий Иванович",
+                                conclusion: "Шизофрения самой последней стадии",
+                                imageUrl: URL(string: "http://apple.com")!),
+                    PatientItem(name: "Андрей петрович",
+                                conclusion: "Абсолютно здоров",
+                                imageUrl: URL(string: "http://apple.com")!)]
     }
     
     
