@@ -816,15 +816,42 @@
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="-16.256157635467982"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kcM-Fi-MzC">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavController" id="38c-9d-ygs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Nbu-0h-f8b">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="26N-m6-lpr" kind="relationship" relationship="rootViewController" id="zK5-x1-Lol"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Onn-3U-I5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="765"/>
+        </scene>
+        <!--PatientsVC-->
+        <scene sceneID="Klb-Gr-y5z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Patients" referencedIdentifier="PatientsVC" id="h3Z-Fv-oyX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qvn-1O-edW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Us-hY-Mig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="723"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="She-kK-l3N">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KtB-dH-LrT"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="w2r-dE-aS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.10588235294117647" green="0.8666666666666667" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.27058823529411763" green="0.78823529411764703" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="tabBar.unselectedItemTintColor">
@@ -832,96 +859,27 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="cAm-Ao-mRa" kind="relationship" relationship="viewControllers" id="9sw-Mx-ifx"/>
-                        <segue destination="bJs-TU-ROh" kind="relationship" relationship="viewControllers" id="ycH-M4-nrO"/>
-                        <segue destination="Faw-PY-kva" kind="relationship" relationship="viewControllers" id="dz1-lC-wi7"/>
-                        <segue destination="7Nv-hG-9eP" kind="relationship" relationship="viewControllers" id="84b-mX-HuG"/>
-                        <segue destination="jLb-Wc-gc7" kind="relationship" relationship="viewControllers" id="wf5-Ef-Icn"/>
+                        <segue destination="h3Z-Fv-oyX" kind="relationship" relationship="viewControllers" id="Pe2-6W-IXK"/>
+                        <segue destination="5bB-qB-17J" kind="relationship" relationship="viewControllers" id="dJZ-Rm-L7u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9Q-2D-VAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="696"/>
+            <point key="canvasLocation" x="967" y="765"/>
         </scene>
-        <!--Запись-->
-        <scene sceneID="wPX-6P-Irb">
+        <!--ProfileVC-->
+        <scene sceneID="iIk-Id-VAf">
             <objects>
-                <navigationController id="7Nv-hG-9eP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Запись" image="Запись иконка" id="TaR-ZV-G6Z"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w5J-ET-9GM">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ky2-nb-IeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileVC" id="5bB-qB-17J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8Et-LL-rcR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTg-Xh-zrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-946" y="1448"/>
-        </scene>
-        <!--Анализы-->
-        <scene sceneID="dmA-Iz-9hM">
-            <objects>
-                <navigationController id="bJs-TU-ROh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Анализы" image="Анализы иконка" id="tPq-Y5-ht2"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ylS-oq-rrH">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jmw-ax-XgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1257" y="1448"/>
-        </scene>
-        <!--Профиль-->
-        <scene sceneID="D5R-FZ-i8K">
-            <objects>
-                <navigationController id="jLb-Wc-gc7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" image="Профиль иконка" id="CQ0-vy-AK3"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="pnK-MJ-Rww">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zlv-54-YmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1961" y="1448"/>
-        </scene>
-        <!--Чат-->
-        <scene sceneID="xCq-TC-cai">
-            <objects>
-                <viewController id="Faw-PY-kva" customClass="OpeningChatVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OBb-D6-dlV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="zbW-U6-1PN"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Чат" image="Чат иконка" id="jdh-m9-0VY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6VG-tj-tX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-193" y="1448"/>
-        </scene>
-        <!--Упражнения-->
-        <scene sceneID="XGI-8d-jrF">
-            <objects>
-                <navigationController id="cAm-Ao-mRa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Упражнения" image="Упражнения иконка" id="gAy-Ri-kGG"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5eb-LR-61Q">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="83t-Mt-KHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="534" y="1448"/>
+            <point key="canvasLocation" x="1687" y="802"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Анализы иконка" width="24" height="24"/>
         <image name="Замок" width="485" height="365"/>
-        <image name="Запись иконка" width="20" height="25"/>
         <image name="Профиль иконка" width="19" height="24"/>
-        <image name="Упражнения иконка" width="24" height="24"/>
-        <image name="Чат иконка" width="24" height="24"/>
     </resources>
 </document>

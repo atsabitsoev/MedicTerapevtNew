@@ -74,7 +74,7 @@ class EnterView: UIViewController {
     private func openApp() {
         
         let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
-        let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+        let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainNavController")
         self.present(mainTabBarController, animated: true, completion: nil)
     }
     
