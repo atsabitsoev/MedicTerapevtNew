@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Compact-Rounded-Light</string>
+		<string>SF-Compact-Rounded-Medium</string>
+		<string>SF-Compact-Rounded-Heavy</string>
+		<string>SF-Compact-Rounded-Regular</string>
+		<string>SF-Compact-Rounded-Ultralight</string>
+		<string>SF-Compact-Rounded-Semibold</string>
+		<string>SF-Compact-Rounded-Black</string>
+		<string>SF-Compact-Rounded-Bold</string>
+		<string>SF-Compact-Rounded-Thin</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

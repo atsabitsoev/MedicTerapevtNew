@@ -13,7 +13,7 @@
         <!--Пациенты-->
         <scene sceneID="N4d-8t-exF">
             <objects>
-                <viewController storyboardIdentifier="PatientsVC" id="n2k-ai-Pla" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientsVC" id="n2k-ai-Pla" customClass="PatientsVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygx-lc-Q56">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
