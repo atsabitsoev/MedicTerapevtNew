@@ -29,10 +29,12 @@ class PatientsVC: UIViewController {
     
     private func fetchPatients() {
         
-        patients = [PatientItem(name: "Геннадий Иванович",
+        patients = [PatientItem(id: "",
+                                name: "Геннадий Иванович",
                                 conclusion: "Шизофрения самой последней стадии",
                                 imageUrl: URL(string: "http://apple.com")!),
-                    PatientItem(name: "Андрей петрович",
+                    PatientItem(id: "",
+                                name: "Андрей петрович",
                                 conclusion: "Абсолютно здоров",
                                 imageUrl: URL(string: "http://apple.com")!)]
     }

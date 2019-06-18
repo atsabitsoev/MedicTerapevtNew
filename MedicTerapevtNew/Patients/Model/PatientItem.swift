@@ -11,15 +11,18 @@ import Foundation
 
 class PatientItem {
     
+    var id: String
     var name: String
     var conclusion: String
     var imageUrl: URL
     
     
-    init(name: String,
+    init(id: String,
+         name: String,
          conclusion: String,
          imageUrl: URL) {
         
+        self.id = id
         self.name = name
         self.conclusion = conclusion
         self.imageUrl = imageUrl
