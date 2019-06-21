@@ -9,26 +9,96 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Профиль-->
-        <scene sceneID="T0Z-vb-HU2">
+        <scene sceneID="smD-ky-61r">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="esF-Ii-S9q" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Edg-9A-66q">
+                <viewController storyboardIdentifier="ProfileVC" id="73Q-CR-pnZ" customClass="ProfileVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9nL-jQ-eI0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rms-t8-B8M" customClass="ProfileHeaderView" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujg-kD-B4s" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="236" y="52" width="133" height="133"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="5SK-ZO-3aW">
+                                <rect key="frame" x="236" y="52" width="133" height="133"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.019607843140000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5SK-ZO-3aW" secondAttribute="height" multiplier="1:1" id="wU1-N6-zH9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k70-C1-tvD">
+                                <rect key="frame" x="18" y="77.5" width="200" height="82"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOO-GM-iwy">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNR-rq-XPs">
+                                        <rect key="frame" x="0.0" y="46" width="200" height="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ro3-W6-Nhj"/>
+                        <constraints>
+                            <constraint firstItem="5SK-ZO-3aW" firstAttribute="top" secondItem="cKJ-Xo-QXe" secondAttribute="top" constant="8" id="6ga-Z7-KFb"/>
+                            <constraint firstItem="5SK-ZO-3aW" firstAttribute="width" secondItem="Rms-t8-B8M" secondAttribute="height" multiplier="1:2" id="CaD-v7-Rjo"/>
+                            <constraint firstItem="5SK-ZO-3aW" firstAttribute="leading" secondItem="k70-C1-tvD" secondAttribute="trailing" constant="18" id="GTI-Um-3ss"/>
+                            <constraint firstItem="cKJ-Xo-QXe" firstAttribute="trailing" secondItem="5SK-ZO-3aW" secondAttribute="trailing" constant="45" id="JkY-Vc-k1X"/>
+                            <constraint firstItem="k70-C1-tvD" firstAttribute="leading" secondItem="Rms-t8-B8M" secondAttribute="leading" constant="18" id="Klg-7S-pDi"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="height" secondItem="9nL-jQ-eI0" secondAttribute="height" multiplier="241:812" id="Pmk-lO-QwF"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="top" secondItem="9nL-jQ-eI0" secondAttribute="top" id="Shd-44-uqf"/>
+                            <constraint firstItem="ujg-kD-B4s" firstAttribute="trailing" secondItem="5SK-ZO-3aW" secondAttribute="trailing" id="VYJ-aY-zew"/>
+                            <constraint firstItem="ujg-kD-B4s" firstAttribute="top" secondItem="5SK-ZO-3aW" secondAttribute="top" id="ZpO-CI-lBT"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="trailing" secondItem="cKJ-Xo-QXe" secondAttribute="trailing" id="aHu-49-REo"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="leading" secondItem="cKJ-Xo-QXe" secondAttribute="leading" id="avg-Mn-8UD"/>
+                            <constraint firstItem="ujg-kD-B4s" firstAttribute="leading" secondItem="5SK-ZO-3aW" secondAttribute="leading" id="gI5-e1-myS"/>
+                            <constraint firstItem="ujg-kD-B4s" firstAttribute="bottom" secondItem="5SK-ZO-3aW" secondAttribute="bottom" id="mhk-8A-Weg"/>
+                            <constraint firstItem="k70-C1-tvD" firstAttribute="centerY" secondItem="5SK-ZO-3aW" secondAttribute="centerY" id="oBt-VH-xte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cKJ-Xo-QXe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Профиль" image="Профиль иконка" id="vPX-Xa-pHA"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="Профиль иконка" id="ZUo-dt-vSu"/>
+                    <navigationItem key="navigationItem" id="NTs-Nh-DKm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="image" destination="5SK-ZO-3aW" id="Exp-ah-BJ9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey4-aj-5ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDc-hU-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.260869565217391" y="68.973214285714278"/>
+            <point key="canvasLocation" x="210.1449275362319" y="-162.05357142857142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Девушка фото" width="112" height="112"/>
         <image name="Профиль иконка" width="19" height="24"/>
     </resources>
 </document>

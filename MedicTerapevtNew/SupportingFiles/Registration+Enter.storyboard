@@ -154,7 +154,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-8U-AQQ">
-                                <rect key="frame" x="80" y="188.66666666666666" width="215" height="42"/>
+                                <rect key="frame" x="79.333333333333329" y="188.66666666666666" width="216.66666666666669" height="43"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
                                 <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

@@ -35,7 +35,6 @@
 		AC1E5E1622B8CF3F00B7E09D /* EnterTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E1522B8CF3F00B7E09D /* EnterTFDelegate.swift */; };
 		AC1E5E1922B8D01800B7E09D /* SimpleGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E1822B8D01800B7E09D /* SimpleGradientView.swift */; };
 		AC1E5E1D22B8D2B000B7E09D /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5E1C22B8D2B000B7E09D /* Patients.storyboard */; };
-		AC1E5E1F22B8D2F400B7E09D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5E1E22B8D2F400B7E09D /* Profile.storyboard */; };
 		AC1E5E2222B8D5D600B7E09D /* PatientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E2122B8D5D600B7E09D /* PatientsVC.swift */; };
 		AC1E5E2422B8D64400B7E09D /* GradientNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E2322B8D64400B7E09D /* GradientNavigationBar.swift */; };
 		AC1E5E2722B8D69200B7E09D /* GradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E2622B8D69200B7E09D /* GradientLayerExtension.swift */; };
@@ -51,6 +50,10 @@
 		AC1E5E3C22B8DC9E00B7E09D /* PatientsTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E3B22B8DC9E00B7E09D /* PatientsTableview.swift */; };
 		AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */; };
 		AC1E5E4122B8DDDA00B7E09D /* PatientItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E4022B8DDDA00B7E09D /* PatientItemCell.swift */; };
+		AC626D4C22BCDD47003ED8BD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC626D4B22BCDD47003ED8BD /* Profile.storyboard */; };
+		AC626D4F22BCDD85003ED8BD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */; };
+		AC626D5122BCDDC2003ED8BD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */; };
+		AC626D5622BCDE8C003ED8BD /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */; };
 		FF5F0671B3ECF11323AFFC83 /* Pods_MedicTerapevtNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +90,6 @@
 		AC1E5E1522B8CF3F00B7E09D /* EnterTFDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterTFDelegate.swift; sourceTree = "<group>"; };
 		AC1E5E1822B8D01800B7E09D /* SimpleGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGradientView.swift; sourceTree = "<group>"; };
 		AC1E5E1C22B8D2B000B7E09D /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
-		AC1E5E1E22B8D2F400B7E09D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AC1E5E2122B8D5D600B7E09D /* PatientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsVC.swift; sourceTree = "<group>"; };
 		AC1E5E2322B8D64400B7E09D /* GradientNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNavigationBar.swift; sourceTree = "<group>"; };
 		AC1E5E2622B8D69200B7E09D /* GradientLayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerExtension.swift; sourceTree = "<group>"; };
@@ -103,6 +105,10 @@
 		AC1E5E3B22B8DC9E00B7E09D /* PatientsTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsTableview.swift; sourceTree = "<group>"; };
 		AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientItem.swift; sourceTree = "<group>"; };
 		AC1E5E4022B8DDDA00B7E09D /* PatientItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientItemCell.swift; sourceTree = "<group>"; };
+		AC626D4B22BCDD47003ED8BD /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicTerapevtNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,10 +154,12 @@
 		AC1E5DC822B8CC4A00B7E09D /* MedicTerapevtNew */ = {
 			isa = PBXGroup;
 			children = (
+				AC626D5222BCDE4E003ED8BD /* GlobalExtensions */,
 				AC1E5DE922B8CCEE00B7E09D /* GlobalEntities */,
 				AC1E5DF422B8CCEE00B7E09D /* GlobalServices */,
 				AC1E5DDB22B8CCEE00B7E09D /* Registration+Enter */,
 				AC1E5E2022B8D5BF00B7E09D /* Patients */,
+				AC626D4D22BCDD6D003ED8BD /* ProfileVC */,
 				AC1E5E0E22B8CCF500B7E09D /* SupportingFiles */,
 				AC1E5DD522B8CC4B00B7E09D /* Info.plist */,
 			);
@@ -211,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1E5DF022B8CCEE00B7E09D /* API */,
+				AC1E5E2522B8D66F00B7E09D /* GradientNavigationBar */,
 				AC1E5E1822B8D01800B7E09D /* SimpleGradientView.swift */,
 				AC1E5DEB22B8CCEE00B7E09D /* NotificationNames.swift */,
 				AC1E5DEC22B8CCEE00B7E09D /* ViewUnderTextFields.swift */,
@@ -218,7 +227,6 @@
 				AC1E5DEE22B8CCEE00B7E09D /* MainTabBarController.swift */,
 				AC1E5DEF22B8CCEE00B7E09D /* Gradient.swift */,
 				AC1E5DF322B8CCEE00B7E09D /* Colors.swift */,
-				AC1E5E2522B8D66F00B7E09D /* GradientNavigationBar */,
 			);
 			path = GlobalEntities;
 			sourceTree = "<group>";
@@ -255,7 +263,7 @@
 				AC1E5DC922B8CC4A00B7E09D /* AppDelegate.swift */,
 				AC1E5E0F22B8CD1600B7E09D /* Registration+Enter.storyboard */,
 				AC1E5E1C22B8D2B000B7E09D /* Patients.storyboard */,
-				AC1E5E1E22B8D2F400B7E09D /* Profile.storyboard */,
+				AC626D4B22BCDD47003ED8BD /* Profile.storyboard */,
 				AC1E5DD022B8CC4B00B7E09D /* Assets.xcassets */,
 				AC1E5DD222B8CC4B00B7E09D /* LaunchScreen.storyboard */,
 				AC1E5E2822B8D77C00B7E09D /* Шрифты */,
@@ -315,6 +323,23 @@
 				AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AC626D4D22BCDD6D003ED8BD /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */,
+				AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		AC626D5222BCDE4E003ED8BD /* GlobalExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */,
+			);
+			path = GlobalExtensions;
 			sourceTree = "<group>";
 		};
 		DA7EF809C5D5DFF1B2B62AC3 /* Frameworks */ = {
@@ -392,12 +417,12 @@
 				AC1E5E3622B8D77C00B7E09D /* SF-Compact-Rounded-Ultralight.otf in Resources */,
 				AC1E5E3422B8D77C00B7E09D /* SF-Compact-Rounded-Light.otf in Resources */,
 				AC1E5E3922B8D77C00B7E09D /* SF-Compact-Rounded-Bold.otf in Resources */,
-				AC1E5E1F22B8D2F400B7E09D /* Profile.storyboard in Resources */,
 				AC1E5E3222B8D77C00B7E09D /* SF-Compact-Rounded-Medium.otf in Resources */,
 				AC1E5E3822B8D77C00B7E09D /* SF-Compact-Rounded-Black.otf in Resources */,
 				AC1E5E1022B8CD1600B7E09D /* Registration+Enter.storyboard in Resources */,
 				AC1E5E3A22B8D77C00B7E09D /* SF-Compact-Rounded-Thin.otf in Resources */,
 				AC1E5DD122B8CC4B00B7E09D /* Assets.xcassets in Resources */,
+				AC626D4C22BCDD47003ED8BD /* Profile.storyboard in Resources */,
 				AC1E5E3722B8D77C00B7E09D /* SF-Compact-Rounded-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +504,7 @@
 				AC1E5DFC22B8CCEE00B7E09D /* RegistrationCodeVCTFDelegate.swift in Sources */,
 				AC1E5E0222B8CCEE00B7E09D /* EnterView.swift in Sources */,
 				AC1E5E1922B8D01800B7E09D /* SimpleGradientView.swift in Sources */,
+				AC626D5122BCDDC2003ED8BD /* ProfileHeaderView.swift in Sources */,
 				AC1E5E0822B8CCEE00B7E09D /* ApiInfo.swift in Sources */,
 				AC1E5E2222B8D5D600B7E09D /* PatientsVC.swift in Sources */,
 				AC1E5DFF22B8CCEE00B7E09D /* EnterCodeTFDelegate.swift in Sources */,
@@ -487,6 +513,7 @@
 				AC1E5E0922B8CCEE00B7E09D /* EnterService.swift in Sources */,
 				AC1E5E0722B8CCEE00B7E09D /* Gradient.swift in Sources */,
 				AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */,
+				AC626D5622BCDE8C003ED8BD /* ImageViewExtension.swift in Sources */,
 				AC1E5E0022B8CCEE00B7E09D /* RegistrationView.swift in Sources */,
 				AC1E5DCA22B8CC4A00B7E09D /* AppDelegate.swift in Sources */,
 				AC1E5E0C22B8CCEE00B7E09D /* RegistrationService.swift in Sources */,
@@ -497,6 +524,7 @@
 				AC1E5DFB22B8CCEE00B7E09D /* RegistrationCodeVC.swift in Sources */,
 				AC1E5E0122B8CCEE00B7E09D /* RegistrationTFDelegate.swift in Sources */,
 				AC1E5E1622B8CF3F00B7E09D /* EnterTFDelegate.swift in Sources */,
+				AC626D4F22BCDD85003ED8BD /* ProfileVC.swift in Sources */,
 				AC1E5DFA22B8CCEE00B7E09D /* ButtonGradient.swift in Sources */,
 				AC1E5DFE22B8CCEE00B7E09D /* ForgotPasswordService.swift in Sources */,
 				AC1E5E0422B8CCEE00B7E09D /* ViewUnderTextFields.swift in Sources */,
