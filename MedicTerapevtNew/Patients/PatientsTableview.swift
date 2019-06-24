@@ -41,10 +41,6 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
-        chatVC.chatService.dialogIndex = indexPath.row
-        self.navigationController?.show(chatVC, sender: nil)
     }
     
     
