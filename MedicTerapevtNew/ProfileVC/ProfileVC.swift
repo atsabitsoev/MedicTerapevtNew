@@ -24,5 +24,7 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
         image?.round()
     }
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 
 }
