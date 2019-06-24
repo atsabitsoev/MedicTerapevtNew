@@ -25,4 +25,5 @@ class PatientItemCell: UITableViewCell {
         imagePatient.layer.cornerRadius = imagePatient.bounds.height / 2
     }
     
+    
 }
