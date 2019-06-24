@@ -816,45 +816,45 @@
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="-16.256157635467982"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kcM-Fi-MzC">
-            <objects>
-                <navigationController storyboardIdentifier="MainNavController" id="38c-9d-ygs" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Nbu-0h-f8b">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="22"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="26N-m6-lpr" kind="relationship" relationship="rootViewController" id="zK5-x1-Lol"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Onn-3U-I5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="210" y="765"/>
-        </scene>
         <!--PatientsVC-->
         <scene sceneID="Klb-Gr-y5z">
             <objects>
                 <viewControllerPlaceholder storyboardName="Patients" referencedIdentifier="PatientsVC" id="h3Z-Fv-oyX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qvn-1O-edW"/>
+                    <navigationItem key="navigationItem" id="C5X-Lc-6oe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Us-hY-Mig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="723"/>
+            <point key="canvasLocation" x="2462" y="613"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Oik-li-QFB">
+            <objects>
+                <navigationController id="Fbo-4E-YwN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R3T-Ab-uAk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="VuB-tL-3eA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="22"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h3Z-Fv-oyX" kind="relationship" relationship="rootViewController" id="oFf-ui-imL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLr-xt-EQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="765"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="She-kK-l3N">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTBController" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="KtB-dH-LrT"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="w2r-dE-aS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.27058823529411763" green="0.78823529411764703" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
@@ -863,8 +863,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="h3Z-Fv-oyX" kind="relationship" relationship="viewControllers" id="Pe2-6W-IXK"/>
-                        <segue destination="5bB-qB-17J" kind="relationship" relationship="viewControllers" id="dJZ-Rm-L7u"/>
+                        <segue destination="Fbo-4E-YwN" kind="relationship" relationship="viewControllers" id="Yvc-ir-gOw"/>
+                        <segue destination="5bB-qB-17J" kind="relationship" relationship="viewControllers" id="Glf-WY-ce2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9Q-2D-VAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -879,7 +879,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTg-Xh-zrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="802"/>
+            <point key="canvasLocation" x="2470" y="899"/>
         </scene>
     </scenes>
     <resources>
