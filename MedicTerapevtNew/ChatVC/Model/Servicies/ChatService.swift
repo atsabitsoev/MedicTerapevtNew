@@ -26,6 +26,7 @@ class ChatService {
             NotificationManager.post(.newMessage)
         }
     }
+    var dialogIndex: Int!
     
     
     func startConnection() {
@@ -47,7 +48,6 @@ class ChatService {
     
     
     private func addHandlers() {
-        
         
         socket.on(clientEvent: .connect) { data, ack in
             
@@ -76,7 +76,7 @@ class ChatService {
                 return
             }
             
-            let dialogId = dialogsArr.first!["id"].stringValue
+            let dialogId = dialogsArr[self.dialogIndex]["id"].stringValue
             print("dialog id - \(dialogId)")
             
             self.socket.emit("enterInDialog", ["dialogId" : dialogId],

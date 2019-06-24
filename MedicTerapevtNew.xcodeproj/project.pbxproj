@@ -69,8 +69,8 @@
 		ACE547D822C0D944009BD2FB /* UserMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE547C822C0D944009BD2FB /* UserMessageCell.swift */; };
 		ACE547D922C0D944009BD2FB /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE547CA22C0D944009BD2FB /* MessageLabel.swift */; };
 		ACE547DA22C0D944009BD2FB /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE547CB22C0D944009BD2FB /* ChatHeaderVIew.swift */; };
-		ACE547DD22C0D95E009BD2FB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE547DC22C0D95E009BD2FB /* Chat.storyboard */; };
 		ACE547E022C0DA16009BD2FB /* ChatImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE547DF22C0DA16009BD2FB /* ChatImageVC.swift */; };
+		ACE547E422C0F958009BD2FB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE547E322C0F958009BD2FB /* Chat.storyboard */; };
 		FF5F0671B3ECF11323AFFC83 /* Pods_MedicTerapevtNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,8 +141,8 @@
 		ACE547C822C0D944009BD2FB /* UserMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageCell.swift; sourceTree = "<group>"; };
 		ACE547CA22C0D944009BD2FB /* MessageLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 		ACE547CB22C0D944009BD2FB /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
-		ACE547DC22C0D95E009BD2FB /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		ACE547DF22C0DA16009BD2FB /* ChatImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatImageVC.swift; sourceTree = "<group>"; };
+		ACE547E322C0F958009BD2FB /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicTerapevtNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -299,7 +299,7 @@
 				AC1E5DC922B8CC4A00B7E09D /* AppDelegate.swift */,
 				AC1E5E0F22B8CD1600B7E09D /* Registration+Enter.storyboard */,
 				AC1E5E1C22B8D2B000B7E09D /* Patients.storyboard */,
-				ACE547DC22C0D95E009BD2FB /* Chat.storyboard */,
+				ACE547E322C0F958009BD2FB /* Chat.storyboard */,
 				AC626D4B22BCDD47003ED8BD /* Profile.storyboard */,
 				AC1E5DD022B8CC4B00B7E09D /* Assets.xcassets */,
 				AC1E5DD222B8CC4B00B7E09D /* LaunchScreen.storyboard */,
@@ -528,7 +528,7 @@
 				AC1E5E3322B8D77C00B7E09D /* SF-Compact-Rounded-Heavy.otf in Resources */,
 				AC1E5E3522B8D77C00B7E09D /* SF-Compact-Rounded-Regular.otf in Resources */,
 				AC1E5E1D22B8D2B000B7E09D /* Patients.storyboard in Resources */,
-				ACE547DD22C0D95E009BD2FB /* Chat.storyboard in Resources */,
+				ACE547E422C0F958009BD2FB /* Chat.storyboard in Resources */,
 				AC1E5DD422B8CC4B00B7E09D /* LaunchScreen.storyboard in Resources */,
 				AC1E5E3622B8D77C00B7E09D /* SF-Compact-Rounded-Ultralight.otf in Resources */,
 				AC1E5E3422B8D77C00B7E09D /* SF-Compact-Rounded-Light.otf in Resources */,
