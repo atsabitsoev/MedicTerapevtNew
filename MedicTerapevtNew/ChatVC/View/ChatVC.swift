@@ -13,6 +13,7 @@ import RxKeyboard
 class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 
+    @IBOutlet weak var labTitle: UILabel!
     @IBOutlet weak var tfMessage: UITextField!
     @IBOutlet weak var viewUnderTF: SimpleGradientView!
     @IBOutlet weak var constrHeaderTop: NSLayoutConstraint!
@@ -42,6 +43,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var chatService = ChatService.standard
     
     
+    var titleString: String!
     var messageArr: [Message] = []
     
     
@@ -49,6 +51,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewDidLoad()
         
         addObservers()
+        self.labTitle.text = titleString
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension

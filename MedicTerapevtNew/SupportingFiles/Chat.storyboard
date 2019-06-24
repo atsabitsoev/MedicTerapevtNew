@@ -348,6 +348,7 @@
                         <outlet property="butSend" destination="ehp-lF-xz2" id="K65-Qj-1gG"/>
                         <outlet property="constrHeaderTop" destination="F8c-D9-GuA" id="bAf-Kn-StE"/>
                         <outlet property="constrLabTitleTop" destination="kQl-6g-wXo" id="AKG-1A-ZFl"/>
+                        <outlet property="labTitle" destination="Xkq-gB-YD5" id="jfc-OO-irt"/>
                         <outlet property="tableView" destination="YOA-dq-XZB" id="dve-dM-4Uc"/>
                         <outlet property="tfMessage" destination="BJf-H4-BHY" id="m9h-DZ-Pbo"/>
                         <outlet property="viewSend" destination="0v7-6a-shU" id="sZp-1z-pAy"/>

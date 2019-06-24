@@ -43,8 +43,8 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+        chatVC.titleString = patients[indexPath.row].name
         self.navigationController?.show(chatVC, sender: nil)
-        //self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
