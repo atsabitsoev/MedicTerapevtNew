@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PatientsVC: UIViewController {
+class PatientsVC: UIViewController, UITabBarControllerDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var patients: [PatientItem] = []
@@ -21,22 +22,48 @@ class PatientsVC: UIViewController {
         super.viewDidLoad()
 
         setNavigationBar()
+        self.tabBarController?.delegate = self
         
+        addObservers()
         fetchPatients()
         tableView.reloadData()
     }
     
     
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updatePatientsList),
+                                               name: NSNotification.Name(NotificationNames.getPatientsListRequestAnswered.rawValue),
+                                               object: nil)
+    }
+    
+    
     private func fetchPatients() {
         
-        patients = [PatientItem(id: "",
-                                name: "Геннадий Иванович",
-                                conclusion: "Шизофрения самой последней стадии",
-                                imageUrl: URL(string: "http://apple.com")!),
-                    PatientItem(id: "",
-                                name: "Андрей петрович",
-                                conclusion: "Абсолютно здоров",
-                                imageUrl: URL(string: "http://apple.com")!)]
+        PatientsListService.standard.getListRequest()
+    }
+    
+    @objc private func updatePatientsList() {
+        
+        guard PatientsListService.standard.errorGettingList == nil else {
+            showErrorAlert(message: PatientsListService.standard.errorGettingList)
+            return
+        }
+        
+        self.patients = PatientsListService.standard.masPatients!
+        tableView.reloadData()
+        activityIndicator.stopAnimating()
+    }
+    
+    
+    private func showErrorAlert(message: String?) {
+        
+        let alert = UIAlertController(title: "Ошибка", message: message ?? "Возникла неизвестная ошибка", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     
@@ -44,9 +71,19 @@ class PatientsVC: UIViewController {
         
         let colors = [Colors().greenGradient1,
                       Colors().greenGradient2]
-        self.tabBarController!.navigationController!.navigationBar.setGradientBackground(colors: colors, startPoint: .bottomLeft, endPoint: .topRight)
-        let item = UINavigationItem(title: "Мои пациенты")
-        self.tabBarController?.navigationController?.navigationBar.setItems([item], animated: true)
+        self.navigationController!.navigationBar.setGradientBackground(colors: colors, startPoint: .bottomLeft, endPoint: .topRight)
+        self.tabBarController!.navigationItem.title = "Мои пациенты"
+    }
+    
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if tabBarController.viewControllers![1] != viewController {
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
+            setNavigationBar()
+            print("fd")
+        } else {
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+        }
     }
     
 

@@ -14,18 +14,15 @@ class PatientItem {
     var id: String
     var name: String
     var conclusion: String
-    var imageUrl: URL
     
     
     init(id: String,
          name: String,
-         conclusion: String,
-         imageUrl: URL) {
+         conclusion: String) {
         
         self.id = id
         self.name = name
         self.conclusion = conclusion
-        self.imageUrl = imageUrl
     }
     
 }

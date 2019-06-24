@@ -54,6 +54,7 @@
 		AC626D4F22BCDD85003ED8BD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */; };
 		AC626D5122BCDDC2003ED8BD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */; };
 		AC626D5622BCDE8C003ED8BD /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */; };
+		ACE547B622C0D1D6009BD2FB /* PatientsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE547B522C0D1D6009BD2FB /* PatientsListService.swift */; };
 		FF5F0671B3ECF11323AFFC83 /* Pods_MedicTerapevtNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		ACE547B522C0D1D6009BD2FB /* PatientsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListService.swift; sourceTree = "<group>"; };
 		DF80982D75C5D0059769F261 /* Pods_MedicTerapevtNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicTerapevtNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1E5E3E22B8DD0D00B7E09D /* PatientItem.swift */,
+				ACE547B522C0D1D6009BD2FB /* PatientsListService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				AC1E5DFF22B8CCEE00B7E09D /* EnterCodeTFDelegate.swift in Sources */,
 				AC1E5E0522B8CCEE00B7E09D /* OpeningChatVC.swift in Sources */,
 				AC1E5E2722B8D69200B7E09D /* GradientLayerExtension.swift in Sources */,
+				ACE547B622C0D1D6009BD2FB /* PatientsListService.swift in Sources */,
 				AC1E5E0922B8CCEE00B7E09D /* EnterService.swift in Sources */,
 				AC1E5E0722B8CCEE00B7E09D /* Gradient.swift in Sources */,
 				AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */,

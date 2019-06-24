@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Пациенты-->
+        <!--Мои пациенты-->
         <scene sceneID="N4d-8t-exF">
             <objects>
                 <viewController storyboardIdentifier="PatientsVC" id="n2k-ai-Pla" customClass="PatientsVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,10 +37,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWV-7D-cGS" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWV-7D-cGS" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                     <rect key="frame" x="13" y="3" width="388" height="146"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-s0-TPV" customClass="ViewUnderTextFields" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-s0-TPV" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                             <rect key="frame" x="13" y="10" width="76" height="76"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -53,7 +53,7 @@
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="jzL-89-T8X" customClass="RoundedImageView" customModule="MedicTerapevtApp" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Девушка фото" translatesAutoresizingMaskIntoConstraints="NO" id="jzL-89-T8X" customClass="RoundedImageView" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                             <rect key="frame" x="13" y="10" width="76" height="76"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="jzL-89-T8X" secondAttribute="height" id="smo-Vz-h6j"/>
@@ -125,6 +125,10 @@
                                     <outlet property="delegate" destination="n2k-ai-Pla" id="paT-Xb-RRz"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1eP-L2-pXe">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -132,12 +136,16 @@
                             <constraint firstItem="TbZ-Nw-7cA" firstAttribute="top" secondItem="0Sp-N9-VdA" secondAttribute="top" id="hLU-yY-tHE"/>
                             <constraint firstItem="0Sp-N9-VdA" firstAttribute="trailing" secondItem="TbZ-Nw-7cA" secondAttribute="trailing" id="lDH-Lm-Dvv"/>
                             <constraint firstItem="TbZ-Nw-7cA" firstAttribute="leading" secondItem="0Sp-N9-VdA" secondAttribute="leading" id="ndd-zT-URZ"/>
+                            <constraint firstItem="1eP-L2-pXe" firstAttribute="centerY" secondItem="ygx-lc-Q56" secondAttribute="centerY" id="nhg-hQ-wJd"/>
+                            <constraint firstItem="1eP-L2-pXe" firstAttribute="centerX" secondItem="ygx-lc-Q56" secondAttribute="centerX" id="pzf-DD-p1y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Sp-N9-VdA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Пациенты" image="Чат иконка" id="so4-5m-hs3"/>
+                    <navigationItem key="navigationItem" title="Мои пациенты" id="qeV-Yo-jsT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="1eP-L2-pXe" id="rXc-AJ-xEy"/>
                         <outlet property="tableView" destination="TbZ-Nw-7cA" id="kAW-6u-e4a"/>
                     </connections>
                 </viewController>

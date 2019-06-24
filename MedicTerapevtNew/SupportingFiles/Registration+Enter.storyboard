@@ -451,13 +451,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-d0-mQP">
                                         <rect key="frame" x="200" y="20" width="205" height="194.66666666666666"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон или E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-a5-Hfi">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="therapist@gmail.com" placeholder="Телефон или E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-a5-Hfi">
                                                 <rect key="frame" x="0.0" y="0.0" width="205" height="77.333333333333329"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-qK-OWa">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-qK-OWa">
                                                 <rect key="frame" x="0.0" y="117.33333333333331" width="205" height="77.333333333333314"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>

@@ -18,21 +18,10 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
         image?.round()
-    }
-    
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        if tabBarController.viewControllers![1] != viewController {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-            print("fd")
-        } else {
-            self.navigationController?.setNavigationBarHidden(true, animated: false)
-        }
     }
     
 

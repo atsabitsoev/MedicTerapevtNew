@@ -23,8 +23,6 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         let currentItem = patients[indexPath.row]
         cell.labName.text = currentItem.name
         cell.labDescribtion.text = currentItem.conclusion
-        let imageData = try? Data(contentsOf: currentItem.imageUrl)
-        cell.imagePatient.image = UIImage(data: imageData ?? Data())
         
         return cell
     }
