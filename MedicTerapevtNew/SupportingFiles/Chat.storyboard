@@ -292,7 +292,7 @@
                                     <constraint firstAttribute="width" constant="40" id="nt0-7Q-Fwa"/>
                                     <constraint firstAttribute="height" constant="25" id="uqu-Ex-lMI"/>
                                 </constraints>
-                                <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="Стрелка влево">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -304,13 +304,38 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dih-4C-zvU">
+                                <rect key="frame" x="338" y="54.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="jhw-03-VJJ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.97254901960784312" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="Анализы иконка"/>
+                                <connections>
+                                    <action selector="butDiagnosticTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="2p7-vj-82L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-5c-HoH">
+                                <rect key="frame" x="371" y="54.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="91f-W2-3TQ"/>
+                                    <constraint firstAttribute="height" constant="25" id="Q2Q-SU-zc6"/>
+                                </constraints>
+                                <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="Упражнения иконка"/>
+                                <connections>
+                                    <action selector="butExercises:" destination="h2z-z8-INL" eventType="touchUpInside" id="jBk-6G-YQh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mvp-0Y-HTy" secondAttribute="trailing" id="0UB-zY-sxl"/>
                             <constraint firstItem="Xkq-gB-YD5" firstAttribute="centerX" secondItem="KOp-Fc-EJx" secondAttribute="centerX" id="0YR-En-TeB"/>
+                            <constraint firstItem="Dih-4C-zvU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xkq-gB-YD5" secondAttribute="trailing" constant="8" id="0iK-Hw-NeD"/>
                             <constraint firstItem="YOA-dq-XZB" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="2qZ-aj-oOd"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="top" secondItem="yKo-Tq-Bf1" secondAttribute="top" constant="6" id="3Jn-vH-GyR"/>
+                            <constraint firstItem="Dih-4C-zvU" firstAttribute="centerY" secondItem="pZ7-X6-xHy" secondAttribute="centerY" id="3y1-8l-YNp"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="centerY" secondItem="yKo-Tq-Bf1" secondAttribute="centerY" constant="-3" id="6HZ-6T-Rnf"/>
                             <constraint firstItem="YOA-dq-XZB" firstAttribute="top" secondItem="Xkq-gB-YD5" secondAttribute="bottom" constant="23.5" id="AWA-TW-eaQ"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="bottom" secondItem="yKo-Tq-Bf1" secondAttribute="bottom" constant="-6" id="Bz0-81-e3w"/>
@@ -328,23 +353,31 @@
                             <constraint firstItem="5kj-wq-5La" firstAttribute="centerY" secondItem="JFO-Ts-wXc" secondAttribute="centerY" id="Msv-kO-r5f"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Q9e-m4-X5M"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="bottom" secondItem="rbT-7E-R5A" secondAttribute="bottom" id="UNF-bb-wLL"/>
+                            <constraint firstItem="Y0e-5c-HoH" firstAttribute="bottom" secondItem="pZ7-X6-xHy" secondAttribute="bottom" id="bcZ-ls-MTe"/>
                             <constraint firstItem="YOA-dq-XZB" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="eL6-RL-TLw"/>
                             <constraint firstItem="Xkq-gB-YD5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pZ7-X6-xHy" secondAttribute="trailing" constant="8" id="eYf-3d-CE0"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="top" secondItem="yKo-Tq-Bf1" secondAttribute="bottom" id="fzg-l2-dtu"/>
                             <constraint firstItem="KOp-Fc-EJx" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="hBd-4w-zc6"/>
+                            <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="Y0e-5c-HoH" secondAttribute="trailing" constant="18" id="hZz-F1-iLZ"/>
                             <constraint firstItem="Xkq-gB-YD5" firstAttribute="top" secondItem="rbT-7E-R5A" secondAttribute="top" constant="8" id="kQl-6g-wXo"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="kq7-EX-Ltu"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="leading" secondItem="JFO-Ts-wXc" secondAttribute="leading" id="l1Q-vc-fEF"/>
+                            <constraint firstItem="Y0e-5c-HoH" firstAttribute="top" secondItem="pZ7-X6-xHy" secondAttribute="top" id="mKG-Vf-EZ7"/>
                             <constraint firstItem="KOp-Fc-EJx" firstAttribute="height" secondItem="JFO-Ts-wXc" secondAttribute="height" multiplier="1:10" id="mKM-oy-eHg"/>
                             <constraint firstItem="0v7-6a-shU" firstAttribute="leading" secondItem="BJf-H4-BHY" secondAttribute="trailing" constant="8" id="muO-hT-pBP"/>
+                            <constraint firstItem="Dih-4C-zvU" firstAttribute="top" secondItem="pZ7-X6-xHy" secondAttribute="top" id="pwY-Lu-vbA"/>
                             <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="0v7-6a-shU" secondAttribute="trailing" constant="8" id="rOP-h5-jNd"/>
+                            <constraint firstItem="Y0e-5c-HoH" firstAttribute="leading" secondItem="Dih-4C-zvU" secondAttribute="trailing" constant="8" id="xrL-Al-jZj"/>
                             <constraint firstItem="pZ7-X6-xHy" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" constant="18" id="yYr-N8-fet"/>
+                            <constraint firstItem="Dih-4C-zvU" firstAttribute="bottom" secondItem="pZ7-X6-xHy" secondAttribute="bottom" id="yqG-tt-98e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rbT-7E-R5A"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="5kj-wq-5La" id="3a6-5c-4xC"/>
                         <outlet property="butClose" destination="pZ7-X6-xHy" id="1L7-hh-Wgq"/>
+                        <outlet property="butDiagnosticResults" destination="Dih-4C-zvU" id="eU5-xK-4Cn"/>
+                        <outlet property="butExercises" destination="Y0e-5c-HoH" id="oSS-2W-T7D"/>
                         <outlet property="butSend" destination="ehp-lF-xz2" id="K65-Qj-1gG"/>
                         <outlet property="constrHeaderTop" destination="F8c-D9-GuA" id="bAf-Kn-StE"/>
                         <outlet property="constrLabTitleTop" destination="kQl-6g-wXo" id="AKG-1A-ZFl"/>
@@ -390,9 +423,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Анализы иконка" width="24" height="24"/>
         <image name="Отправить иконка" width="21" height="19"/>
         <image name="Профиль иконка" width="19" height="24"/>
         <image name="Стрелка влево" width="31" height="20"/>
         <image name="Терапевт фото" width="115" height="115"/>
+        <image name="Упражнения иконка" width="24" height="24"/>
     </resources>
 </document>

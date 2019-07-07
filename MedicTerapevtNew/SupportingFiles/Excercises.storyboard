@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bsH-ZN-Wb1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+        <array key="SF-Compact-Rounded-Semibold.otf">
+            <string>SFCompactRounded-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ExcercisesVC-->
+        <scene sceneID="g1f-ui-uH8">
+            <objects>
+                <viewController storyboardIdentifier="ExcercisesVC" id="bsH-ZN-Wb1" customClass="ExcercisesVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXr-YN-pi6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBt-tG-JxD">
+                                <rect key="frame" x="0.0" y="122" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="204"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXB-Hj-m9r" id="eC7-t3-yqe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-rD-z0r" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="25" y="8" width="364" height="151"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-oN-Opj">
+                                                    <rect key="frame" x="25" y="8" width="364" height="151"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="151" id="eCa-in-ft9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Боковые наклоны головы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6N-pP-eNM">
+                                                    <rect key="frame" x="25" y="167" width="218" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Semibold" family="SF Compact Rounded" pointSize="18"/>
+                                                    <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-ON-1cM" customClass="ViewPlay" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="189" y="65.5" width="36" height="36"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="4b8-1H-bJH"/>
+                                                        <constraint firstAttribute="width" constant="36" id="Iao-uU-DZe"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" constant="25" id="7yf-4z-AhO"/>
+                                                <constraint firstItem="hhG-oN-Opj" firstAttribute="top" secondItem="eC7-t3-yqe" secondAttribute="top" constant="8" id="8Nn-7m-fIx"/>
+                                                <constraint firstItem="VBg-rD-z0r" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" id="B7y-fV-vKd"/>
+                                                <constraint firstItem="l6N-pP-eNM" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="CMp-ww-x1l"/>
+                                                <constraint firstItem="fyP-ON-1cM" firstAttribute="centerY" secondItem="hhG-oN-Opj" secondAttribute="centerY" id="PMh-jk-css"/>
+                                                <constraint firstItem="VBg-rD-z0r" firstAttribute="leading" secondItem="hhG-oN-Opj" secondAttribute="leading" id="QR5-r2-zAW"/>
+                                                <constraint firstItem="VBg-rD-z0r" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="top" id="Z55-BW-a0Z"/>
+                                                <constraint firstItem="fyP-ON-1cM" firstAttribute="centerX" secondItem="eC7-t3-yqe" secondAttribute="centerX" id="odV-9a-nlM"/>
+                                                <constraint firstItem="l6N-pP-eNM" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="8" id="pIH-Nr-bGp"/>
+                                                <constraint firstItem="hhG-oN-Opj" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="uhC-kg-eh8"/>
+                                                <constraint firstItem="VBg-rD-z0r" firstAttribute="bottom" secondItem="hhG-oN-Opj" secondAttribute="bottom" id="yAI-eU-DP2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagePreview" destination="hhG-oN-Opj" id="xl7-f0-U4B"/>
+                                            <outlet property="labTitle" destination="l6N-pP-eNM" id="vcj-yJ-P0y"/>
+                                            <outlet property="viewPlay" destination="fyP-ON-1cM" id="QQP-Lx-zep"/>
+                                            <outlet property="viewShadow" destination="VBg-rD-z0r" id="Pbs-18-Koo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bsH-ZN-Wb1" id="sQe-3U-EHL"/>
+                                    <outlet property="delegate" destination="bsH-ZN-Wb1" id="pyj-zg-GKD"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="104.5" y="94" width="205" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                        <color key="value" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-H6-SbU">
+                                <rect key="frame" x="104.5" y="94" width="205" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TnU-F9-Met"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Прописанные"/>
+                                    <segment title="Все"/>
+                                </segments>
+                                <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stateChanged:" destination="bsH-ZN-Wb1" eventType="valueChanged" id="5EV-Jj-fb9"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V14-4q-GId">
+                                <rect key="frame" x="131" y="52" width="152.5" height="30"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
+                                <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-mx-7KF">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TuC-H6-SbU" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="bottom" constant="12" id="Clx-Uy-DVW"/>
+                            <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="8" id="DNs-WQ-aC5"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="bottom" secondItem="TuC-H6-SbU" secondAttribute="bottom" id="I0l-eA-ocP"/>
+                            <constraint firstItem="U7g-mx-7KF" firstAttribute="centerY" secondItem="GXr-YN-pi6" secondAttribute="centerY" id="LZO-FI-YGh"/>
+                            <constraint firstItem="mBt-tG-JxD" firstAttribute="trailing" secondItem="n78-v5-CLM" secondAttribute="trailing" id="Oo5-9v-nqJ"/>
+                            <constraint firstAttribute="bottom" secondItem="mBt-tG-JxD" secondAttribute="bottom" id="VVU-ZQ-zCO"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="leading" secondItem="TuC-H6-SbU" secondAttribute="leading" id="YKV-qO-Lrx"/>
+                            <constraint firstItem="TuC-H6-SbU" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="aHL-hl-f0L"/>
+                            <constraint firstItem="U7g-mx-7KF" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="b7E-ob-EIC"/>
+                            <constraint firstItem="mBt-tG-JxD" firstAttribute="leading" secondItem="n78-v5-CLM" secondAttribute="leading" id="cCX-QH-Nyx"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="trailing" secondItem="TuC-H6-SbU" secondAttribute="trailing" id="cOi-DN-gNb"/>
+                            <constraint firstItem="V14-4q-GId" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="gAo-Ye-498"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="top" id="ohc-Q5-Uhc"/>
+                            <constraint firstItem="V14-4q-GId" firstAttribute="top" secondItem="n78-v5-CLM" secondAttribute="top" constant="8" id="vae-pU-6iT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n78-v5-CLM"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="U7g-mx-7KF" id="6JY-gB-MJY"/>
+                        <outlet property="segmentedControl" destination="TuC-H6-SbU" id="b51-Fb-S5W"/>
+                        <outlet property="tableView" destination="mBt-tG-JxD" id="pxm-gs-dnm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qci-Y3-qko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.71014492753625" y="-133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>

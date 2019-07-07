@@ -33,6 +33,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                              for: .normal)
         }
     }
+    @IBOutlet weak var butExercises: UIButton!
+    @IBOutlet weak var butDiagnosticResults: UIButton!
     
     
     private var rxFirstCircle = true
@@ -51,7 +53,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewDidLoad()
         
         addObservers()
-        self.labTitle.text = titleString
+        configureView()
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
@@ -68,6 +70,14 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
         scrollToBottom(animated: false)
+    }
+    
+    
+    private func configureView() {
+        
+        self.labTitle.text = titleString
+        butDiagnosticResults.setImage(butDiagnosticResults.currentImage?.withRenderingMode(.alwaysTemplate), for: .normal)
+        butExercises.setImage(butExercises.currentImage?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
     
@@ -236,6 +246,21 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         imagePicker.delegate = self
         self.present(imagePicker, animated: true, completion: nil)
         
+    }
+    
+    
+    @IBAction func butDiagnosticTapped(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Excercises", bundle: nil)
+        let exercisesVC = storyboard.instantiateViewController(withIdentifier: "ExcercisesVC")
+        self.present(exercisesVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func butExercises(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
+        let diagnosticVC = storyboard.instantiateViewController(withIdentifier: "DiagnosticResultsVC")
+        self.present(diagnosticVC, animated: true, completion: nil)
     }
     
     

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6g4-5r-CPg">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+        <array key="SF-Compact-Rounded-Regular.otf">
+            <string>SFCompactRounded-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Результаты диагностики-->
+        <scene sceneID="hnV-2y-Fbs">
+            <objects>
+                <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGy-g2-zlR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDj-h1-72C" id="YlF-34-Ltr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-fl-pkH" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="0.0" width="378" height="210"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-UZ-ZzP">
+                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="XRq-UZ-ZzP" firstAttribute="centerY" secondItem="aUL-Fy-rRg" secondAttribute="centerY" id="Pay-1m-zDi"/>
+                                                                <constraint firstItem="XRq-UZ-ZzP" firstAttribute="leading" secondItem="aUL-Fy-rRg" secondAttribute="leading" constant="16" id="zci-5M-1dT"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Модель позвоночника" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-7B-O8m">
+                                                            <rect key="frame" x="16" y="49.5" width="221" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="D7h-C2-Kj0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Позвоночник" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-GR-hma">
+                                                            <rect key="frame" x="8" y="85.5" width="362" height="116.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="aUy-GR-hma" secondAttribute="trailing" constant="8" id="INR-Jm-6le"/>
+                                                        <constraint firstItem="L9C-7B-O8m" firstAttribute="top" secondItem="aUL-Fy-rRg" secondAttribute="bottom" id="IkP-Q8-I3X"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aUy-GR-hma" secondAttribute="bottom" constant="8" id="TTk-VV-ojJ"/>
+                                                        <constraint firstItem="aUy-GR-hma" firstAttribute="top" secondItem="L9C-7B-O8m" secondAttribute="bottom" id="UaK-Cj-GBG"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" id="aOj-bm-i0Y"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="top" secondItem="NhR-fl-pkH" secondAttribute="top" id="atP-a2-jjK"/>
+                                                        <constraint firstItem="L9C-7B-O8m" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="16" id="e7w-He-gRc"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="height" secondItem="NhR-fl-pkH" secondAttribute="height" multiplier="45:190" id="mGM-kK-M5V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aUL-Fy-rRg" secondAttribute="trailing" id="qbR-G5-c5h"/>
+                                                        <constraint firstItem="aUy-GR-hma" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="8" id="yfc-le-rG7"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="top" secondItem="YlF-34-Ltr" secondAttribute="top" id="7Fd-kb-h08"/>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="leading" secondItem="YlF-34-Ltr" secondAttribute="leading" constant="18" id="Ajc-Uu-fE0"/>
+                                                <constraint firstAttribute="trailing" secondItem="NhR-fl-pkH" secondAttribute="trailing" constant="18" id="OOL-g1-fYr"/>
+                                                <constraint firstAttribute="bottom" secondItem="NhR-fl-pkH" secondAttribute="bottom" constant="12" id="fzA-pL-rUh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labDate" destination="XRq-UZ-ZzP" id="pK1-2W-fft"/>
+                                            <outlet property="labTitle" destination="L9C-7B-O8m" id="ZvG-Mj-p9F"/>
+                                            <outlet property="viewGradientHeader" destination="aUL-Fy-rRg" id="Wdk-yF-gBh"/>
+                                            <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticConclusionCell" rowHeight="222" id="y8V-Ye-3iz" customClass="DiagnosticConclusionCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="250" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8V-Ye-3iz" id="sth-36-JFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtK-vg-2e4" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="0.0" width="378" height="210"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-yr-4Et" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-AJ-ksS">
+                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="NZn-AJ-ksS" firstAttribute="centerY" secondItem="JDo-yr-4Et" secondAttribute="centerY" id="RBX-pm-uyw"/>
+                                                                <constraint firstItem="NZn-AJ-ksS" firstAttribute="leading" secondItem="JDo-yr-4Et" secondAttribute="leading" constant="16" id="otk-sq-DWu"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заключение врача" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-im-Wu1">
+                                                            <rect key="frame" x="16" y="49.5" width="346" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="snH-bn-vhB"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
+                                                            <rect key="frame" x="16" y="93.5" width="346" height="108.5"/>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="W0b-im-Wu1" secondAttribute="trailing" constant="16" id="12A-yj-EX5"/>
+                                                        <constraint firstItem="W0b-im-Wu1" firstAttribute="top" secondItem="JDo-yr-4Et" secondAttribute="bottom" id="9b2-om-qjL"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="top" secondItem="ZtK-vg-2e4" secondAttribute="top" id="KmB-V0-BRX"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="height" secondItem="ZtK-vg-2e4" secondAttribute="height" multiplier="45:190" id="LAG-6E-Gid"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JDo-yr-4Et" secondAttribute="trailing" id="U32-1L-Sb9"/>
+                                                        <constraint firstItem="TpQ-IQ-K0H" firstAttribute="top" secondItem="W0b-im-Wu1" secondAttribute="bottom" constant="8" id="bgl-tu-046"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TpQ-IQ-K0H" secondAttribute="trailing" constant="16" id="bxh-s2-73n"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="leading" secondItem="ZtK-vg-2e4" secondAttribute="leading" id="jC3-z7-e5W"/>
+                                                        <constraint firstItem="W0b-im-Wu1" firstAttribute="leading" secondItem="ZtK-vg-2e4" secondAttribute="leading" constant="16" id="mdd-Rq-NWJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TpQ-IQ-K0H" secondAttribute="bottom" constant="8" id="mgF-uv-V8F"/>
+                                                        <constraint firstItem="TpQ-IQ-K0H" firstAttribute="leading" secondItem="W0b-im-Wu1" secondAttribute="leading" id="pmX-yx-MAV"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZtK-vg-2e4" firstAttribute="top" secondItem="sth-36-JFa" secondAttribute="top" id="6Iw-kS-lla"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZtK-vg-2e4" secondAttribute="trailing" constant="18" id="F82-FI-2wB"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZtK-vg-2e4" secondAttribute="bottom" constant="12" id="NFH-xk-6JN"/>
+                                                <constraint firstItem="ZtK-vg-2e4" firstAttribute="leading" secondItem="sth-36-JFa" secondAttribute="leading" constant="18" id="v71-6r-wG1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labConclusion" destination="TpQ-IQ-K0H" id="PRc-qj-dQH"/>
+                                            <outlet property="labDate" destination="NZn-AJ-ksS" id="q27-cs-qfB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="inj-eR-xnr" id="UD8-zH-100"/>
+                                    <outlet property="delegate" destination="inj-eR-xnr" id="ndT-2x-yP9"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-s4-H0x">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="leading" secondItem="bZA-WI-sbE" secondAttribute="leading" id="KHw-rS-nkw"/>
+                            <constraint firstItem="l6U-s4-H0x" firstAttribute="centerY" secondItem="cGy-g2-zlR" secondAttribute="centerY" id="Mu9-vA-gxj"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="bZA-WI-sbE" secondAttribute="top" id="PP0-fg-Bwm"/>
+                            <constraint firstItem="l6U-s4-H0x" firstAttribute="centerX" secondItem="cGy-g2-zlR" secondAttribute="centerX" id="ajw-oW-Zg2"/>
+                            <constraint firstAttribute="bottom" secondItem="VmU-en-iae" secondAttribute="bottom" id="bEs-Kr-LCD"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="trailing" secondItem="bZA-WI-sbE" secondAttribute="trailing" id="u8M-wo-czV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bZA-WI-sbE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Результаты диагностики" id="5YI-yJ-QY1">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="AjO-IW-OCp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="l6U-s4-H0x" id="nmC-Ff-eiG"/>
+                        <outlet property="tableView" destination="VmU-en-iae" id="6GU-zS-Wos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhb-AX-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
+        </scene>
+        <!--Позвоночник-->
+        <scene sceneID="dS5-pb-Or0">
+            <objects>
+                <viewController storyboardIdentifier="BackboneVC" id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJJ-md-QUh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-An-pzt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-uj-kHp">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dDm-uj-kHp" firstAttribute="centerY" secondItem="zJJ-md-QUh" secondAttribute="centerY" id="1vA-Xa-iG5"/>
+                            <constraint firstItem="vdS-An-pzt" firstAttribute="leading" secondItem="2mE-BJ-M8S" secondAttribute="leading" id="Mxp-On-sUG"/>
+                            <constraint firstItem="vdS-An-pzt" firstAttribute="top" secondItem="2mE-BJ-M8S" secondAttribute="top" id="NOu-Dh-bxN"/>
+                            <constraint firstItem="dDm-uj-kHp" firstAttribute="centerX" secondItem="zJJ-md-QUh" secondAttribute="centerX" id="T82-78-47b"/>
+                            <constraint firstItem="2mE-BJ-M8S" firstAttribute="bottom" secondItem="vdS-An-pzt" secondAttribute="bottom" id="hRp-r0-5r1"/>
+                            <constraint firstItem="2mE-BJ-M8S" firstAttribute="trailing" secondItem="vdS-An-pzt" secondAttribute="trailing" id="wiO-q8-9Cn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2mE-BJ-M8S"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Позвоночник" id="Y65-nM-C6o"/>
+                    <connections>
+                        <outlet property="activityView" destination="dDm-uj-kHp" id="hbS-GP-dCd"/>
+                        <outlet property="imageMain" destination="vdS-An-pzt" id="bzh-1W-Rc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKD-g5-7RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="149"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="gZq-Z8-SBt">
+            <objects>
+                <viewController storyboardIdentifier="DiagnosticItemVC" id="QgV-LR-ZFb" customClass="DiagnosticItemVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xyt-ce-UXk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-Fy-nPL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ugV-rA-4vx">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gQx-Fy-nPL" firstAttribute="leading" secondItem="w8G-TR-p9S" secondAttribute="leading" id="4e5-yC-lbE"/>
+                            <constraint firstItem="gQx-Fy-nPL" firstAttribute="top" secondItem="w8G-TR-p9S" secondAttribute="top" id="PzW-0l-mjD"/>
+                            <constraint firstItem="ugV-rA-4vx" firstAttribute="centerY" secondItem="Xyt-ce-UXk" secondAttribute="centerY" id="UZb-Bh-lRe"/>
+                            <constraint firstItem="w8G-TR-p9S" firstAttribute="trailing" secondItem="gQx-Fy-nPL" secondAttribute="trailing" id="ib4-fv-TO7"/>
+                            <constraint firstItem="ugV-rA-4vx" firstAttribute="centerX" secondItem="Xyt-ce-UXk" secondAttribute="centerX" id="oRT-q7-esO"/>
+                            <constraint firstItem="w8G-TR-p9S" firstAttribute="bottom" secondItem="gQx-Fy-nPL" secondAttribute="bottom" id="xFq-X0-4fY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w8G-TR-p9S"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Pb0-yv-gGl"/>
+                    <connections>
+                        <outlet property="activityView" destination="ugV-rA-4vx" id="8h3-tR-Mdc"/>
+                        <outlet property="imageMain" destination="gQx-Fy-nPL" id="e9M-b4-yFZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fq7-dU-XzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Позвоночник" width="321" height="108"/>
+    </resources>
+</document>
