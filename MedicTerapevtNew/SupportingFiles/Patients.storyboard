@@ -68,7 +68,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остеохандроз, дегенеративно-дистрофическое мультифакториальное, хроническое, рецидивирующее заболевание" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="65M-E8-l8t">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остеохандроз, дегенеративно-дистрофическое мультифакториальное, хроническое, рецидивирующее заболевание" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="65M-E8-l8t">
                                                             <rect key="frame" x="102" y="41" width="273" height="97"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
                                                             <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +126,7 @@
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1eP-L2-pXe">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="0.31747966999999999" green="0.82717031240000005" blue="0.99655574560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

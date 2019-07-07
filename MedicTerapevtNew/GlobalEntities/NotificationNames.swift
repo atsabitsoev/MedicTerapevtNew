@@ -35,6 +35,7 @@ enum NotificationNames: String {
     
     case getAllExercisesRequestAnswered = "getAllExercisesRequestAnswered"
     case getDiagnosticInfoRequestAnswered = "getDiagnosticInfoRequestAnswered"
+    case getCurrentPatientExercisesRequestAnswered = "getCurrentPatientExercisesRequestAnswered"
     
     // врач
     case getPatientsListRequestAnswered = "getPatientsListRequestAnswered"

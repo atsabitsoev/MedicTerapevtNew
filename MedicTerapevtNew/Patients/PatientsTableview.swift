@@ -44,6 +44,7 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
         chatVC.titleString = patients[indexPath.row].name
+        chatVC.patientID = patients[indexPath.row].id
         self.navigationController?.show(chatVC, sender: nil)
     }
     

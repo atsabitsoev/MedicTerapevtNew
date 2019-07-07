@@ -46,6 +46,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     var titleString: String!
+    var patientID: String!
     var messageArr: [Message] = []
     
     
@@ -65,6 +66,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController!.setNavigationBarHidden(true, animated: animated)
+        scrollToBottom(animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -251,21 +253,25 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func butDiagnosticTapped(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "Excercises", bundle: nil)
-        let exercisesVC = storyboard.instantiateViewController(withIdentifier: "ExcercisesVC")
-        self.present(exercisesVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
+        let diagnosticVC = storyboard.instantiateViewController(withIdentifier: "DiagnosticResultsVC") as! DiagnosticResultsVC
+        diagnosticVC.patientID = self.patientID
+        let navigationController = UINavigationController(rootViewController: diagnosticVC)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func butExercises(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
-        let diagnosticVC = storyboard.instantiateViewController(withIdentifier: "DiagnosticResultsVC")
-        self.present(diagnosticVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Excercises", bundle: nil)
+        let exercisesVC = storyboard.instantiateViewController(withIdentifier: "ExcercisesVC") as! ExcercisesVC
+        exercisesVC.patientID = self.patientID
+        self.present(exercisesVC, animated: true, completion: nil)
     }
     
     
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
+        chatService.stopConnection()
         self.navigationController?.popViewController(animated: true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }

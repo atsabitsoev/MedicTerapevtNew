@@ -100,7 +100,7 @@ class ChatService {
                 return message
             })
             
-            MessageHistoryService.standard.messages = messages
+            MessageHistoryService.standard.messages = messages.reversed()
             NotificationManager.post(.messagesFetched)
         }
         
@@ -157,6 +157,7 @@ class ChatService {
     
     
     func stopConnection() {
+        
         
         socket.disconnect()
         socket.off(clientEvent: .connect)

@@ -21,23 +21,23 @@
         <!--ExcercisesVC-->
         <scene sceneID="g1f-ui-uH8">
             <objects>
-                <viewController storyboardIdentifier="ExcercisesVC" id="bsH-ZN-Wb1" customClass="ExcercisesVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExcercisesVC" id="bsH-ZN-Wb1" customClass="ExcercisesVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXr-YN-pi6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBt-tG-JxD">
-                                <rect key="frame" x="0.0" y="122" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="125" width="414" height="771"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicTerapevtNew" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXB-Hj-m9r" id="eC7-t3-yqe">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-rD-z0r" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-rD-z0r" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                     <rect key="frame" x="25" y="8" width="364" height="151"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -65,7 +65,7 @@
                                                     <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-ON-1cM" customClass="ViewPlay" customModule="MedicApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-ON-1cM" customClass="ViewPlay" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                     <rect key="frame" x="189" y="65.5" width="36" height="36"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -101,8 +101,8 @@
                                     <outlet property="delegate" destination="bsH-ZN-Wb1" id="pyj-zg-GKD"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="104.5" y="94" width="205" height="20"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="104.5" y="97" width="205" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
@@ -118,7 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-H6-SbU">
-                                <rect key="frame" x="104.5" y="94" width="205" height="21"/>
+                                <rect key="frame" x="104.5" y="97" width="205" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="TnU-F9-Met"/>
@@ -133,18 +133,29 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V14-4q-GId">
-                                <rect key="frame" x="131" y="52" width="152.5" height="30"/>
+                                <rect key="frame" x="131" y="52" width="152.5" height="33"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
-                                <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31747967004776001" green="0.82717031240463257" blue="0.99655574560165405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-mx-7KF">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" red="0.31747966999999999" green="0.82717031240000005" blue="0.99655574560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ0-rZ-uCJ">
+                                <rect key="frame" x="366" y="52" width="30" height="33"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="17"/>
+                                <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="butCloseTapped:" destination="bsH-ZN-Wb1" eventType="touchUpInside" id="9Im-i3-REP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yZ0-rZ-uCJ" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="top" id="0TU-Dz-G5o"/>
+                            <constraint firstItem="yZ0-rZ-uCJ" firstAttribute="centerY" secondItem="V14-4q-GId" secondAttribute="centerY" id="58g-ar-9bi"/>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="bottom" constant="12" id="Clx-Uy-DVW"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="8" id="DNs-WQ-aC5"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="bottom" secondItem="TuC-H6-SbU" secondAttribute="bottom" id="I0l-eA-ocP"/>
@@ -157,8 +168,11 @@
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="leading" secondItem="n78-v5-CLM" secondAttribute="leading" id="cCX-QH-Nyx"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="trailing" secondItem="TuC-H6-SbU" secondAttribute="trailing" id="cOi-DN-gNb"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="gAo-Ye-498"/>
+                            <constraint firstItem="yZ0-rZ-uCJ" firstAttribute="bottom" secondItem="V14-4q-GId" secondAttribute="bottom" id="lpp-fE-k89"/>
+                            <constraint firstItem="n78-v5-CLM" firstAttribute="trailing" secondItem="yZ0-rZ-uCJ" secondAttribute="trailing" constant="18" id="ns8-aC-Rea"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="top" id="ohc-Q5-Uhc"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="top" secondItem="n78-v5-CLM" secondAttribute="top" constant="8" id="vae-pU-6iT"/>
+                            <constraint firstItem="yZ0-rZ-uCJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V14-4q-GId" secondAttribute="trailing" constant="8" id="wak-Ec-MEk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n78-v5-CLM"/>
                     </view>

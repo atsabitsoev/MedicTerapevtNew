@@ -26,4 +26,9 @@ class PatientItemCell: UITableViewCell {
     }
     
     
+    override func awakeFromNib() {
+        imagePatient.layer.cornerRadius = imagePatient.bounds.height / 2
+    }
+    
+    
 }

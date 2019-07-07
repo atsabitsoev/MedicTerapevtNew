@@ -17,20 +17,34 @@ class DiagnosticResultsVC: UIViewController {
     
     let diagnosticService = DiagnosticService.standard
     
-    
+    var patientID: String!
     var masDiagnosticInfo: [DiagnosticInfo] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setNavigationBar()
+        
         tableView.delaysContentTouches = false
         navigationController?.navigationBar.shadowImage = UIImage()
 
         addObservers()
         
-        DiagnosticService.standard.getDiagnosticInfoRequest()
+        DiagnosticService.standard.getDiagnosticInfoRequest(id: patientID)
         activityIndicator.startAnimating()
+    }
+    
+    
+    private func setNavigationBar() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Закрыть",
+                                                                 style: .done,
+                                                                 target: self,
+                                                                 action: #selector(closeNav))
+    }
+    
+    @objc private func closeNav() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     

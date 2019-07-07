@@ -22,9 +22,9 @@ class DiagnosticService {
     var masDiagnosticInfo: [DiagnosticInfo]?
     
     
-    func getDiagnosticInfoRequest() {
+    func getDiagnosticInfoRequest(id: String) {
         
-        let url = "\(ApiInfo().baseUrl)/patient/\(TokenService.standard.id!)/diagnosticInfo"
+        let url = "\(ApiInfo().baseUrl)/patient/\(id)/diagnosticInfo"
         
         let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
         

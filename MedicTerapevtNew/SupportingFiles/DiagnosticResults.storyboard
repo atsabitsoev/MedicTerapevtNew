@@ -21,30 +21,30 @@
         <!--Результаты диагностики-->
         <scene sceneID="hnV-2y-Fbs">
             <objects>
-                <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGy-g2-zlR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicTerapevtNew" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="222"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDj-h1-72C" id="YlF-34-Ltr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-fl-pkH" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-fl-pkH" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                     <rect key="frame" x="18" y="0.0" width="378" height="210"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-UZ-ZzP">
-                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <rect key="frame" x="16" y="11.5" width="83" height="22"/>
                                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -54,18 +54,16 @@
                                                             <constraints>
                                                                 <constraint firstItem="XRq-UZ-ZzP" firstAttribute="centerY" secondItem="aUL-Fy-rRg" secondAttribute="centerY" id="Pay-1m-zDi"/>
                                                                 <constraint firstItem="XRq-UZ-ZzP" firstAttribute="leading" secondItem="aUL-Fy-rRg" secondAttribute="leading" constant="16" id="zci-5M-1dT"/>
+                                                                <constraint firstAttribute="height" constant="45" id="zit-0Q-Y8q"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                     <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Модель позвоночника" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-7B-O8m">
-                                                            <rect key="frame" x="16" y="49.5" width="221" height="36"/>
+                                                            <rect key="frame" x="16" y="45" width="346" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="36" id="D7h-C2-Kj0"/>
                                                             </constraints>
@@ -74,7 +72,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Позвоночник" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-GR-hma">
-                                                            <rect key="frame" x="8" y="85.5" width="362" height="116.5"/>
+                                                            <rect key="frame" x="8" y="81" width="362" height="121"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,8 +84,8 @@
                                                         <constraint firstItem="aUL-Fy-rRg" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" id="aOj-bm-i0Y"/>
                                                         <constraint firstItem="aUL-Fy-rRg" firstAttribute="top" secondItem="NhR-fl-pkH" secondAttribute="top" id="atP-a2-jjK"/>
                                                         <constraint firstItem="L9C-7B-O8m" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="16" id="e7w-He-gRc"/>
-                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="height" secondItem="NhR-fl-pkH" secondAttribute="height" multiplier="45:190" id="mGM-kK-M5V"/>
                                                         <constraint firstAttribute="trailing" secondItem="aUL-Fy-rRg" secondAttribute="trailing" id="qbR-G5-c5h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L9C-7B-O8m" secondAttribute="trailing" constant="16" id="rZo-aG-dRP"/>
                                                         <constraint firstItem="aUy-GR-hma" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="8" id="yfc-le-rG7"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -117,21 +115,21 @@
                                             <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticConclusionCell" rowHeight="222" id="y8V-Ye-3iz" customClass="DiagnosticConclusionCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticConclusionCell" rowHeight="222" id="y8V-Ye-3iz" customClass="DiagnosticConclusionCell" customModule="MedicTerapevtNew" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="250" width="414" height="222"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8V-Ye-3iz" id="sth-36-JFa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtK-vg-2e4" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtK-vg-2e4" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
                                                     <rect key="frame" x="18" y="0.0" width="378" height="210"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-yr-4Et" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-yr-4Et" customClass="ViewGradientHeader" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-AJ-ksS">
-                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <rect key="frame" x="16" y="11.5" width="83" height="22"/>
                                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -141,18 +139,16 @@
                                                             <constraints>
                                                                 <constraint firstItem="NZn-AJ-ksS" firstAttribute="centerY" secondItem="JDo-yr-4Et" secondAttribute="centerY" id="RBX-pm-uyw"/>
                                                                 <constraint firstItem="NZn-AJ-ksS" firstAttribute="leading" secondItem="JDo-yr-4Et" secondAttribute="leading" constant="16" id="otk-sq-DWu"/>
+                                                                <constraint firstAttribute="height" constant="45" id="sTS-nl-huQ"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                     <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заключение врача" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-im-Wu1">
-                                                            <rect key="frame" x="16" y="49.5" width="346" height="36"/>
+                                                            <rect key="frame" x="16" y="45" width="346" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="36" id="snH-bn-vhB"/>
                                                             </constraints>
@@ -160,8 +156,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
-                                                            <rect key="frame" x="16" y="93.5" width="346" height="108.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
+                                                            <rect key="frame" x="16" y="89" width="346" height="113"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -172,7 +168,6 @@
                                                         <constraint firstAttribute="trailing" secondItem="W0b-im-Wu1" secondAttribute="trailing" constant="16" id="12A-yj-EX5"/>
                                                         <constraint firstItem="W0b-im-Wu1" firstAttribute="top" secondItem="JDo-yr-4Et" secondAttribute="bottom" id="9b2-om-qjL"/>
                                                         <constraint firstItem="JDo-yr-4Et" firstAttribute="top" secondItem="ZtK-vg-2e4" secondAttribute="top" id="KmB-V0-BRX"/>
-                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="height" secondItem="ZtK-vg-2e4" secondAttribute="height" multiplier="45:190" id="LAG-6E-Gid"/>
                                                         <constraint firstAttribute="trailing" secondItem="JDo-yr-4Et" secondAttribute="trailing" id="U32-1L-Sb9"/>
                                                         <constraint firstItem="TpQ-IQ-K0H" firstAttribute="top" secondItem="W0b-im-Wu1" secondAttribute="bottom" constant="8" id="bgl-tu-046"/>
                                                         <constraint firstAttribute="trailing" secondItem="TpQ-IQ-K0H" secondAttribute="trailing" constant="16" id="bxh-s2-73n"/>
@@ -213,7 +208,7 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-s4-H0x">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
                                 <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                         </subviews>
@@ -240,10 +235,26 @@
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIm-ol-tYf">
+            <objects>
+                <navigationController storyboardIdentifier="diagNavMain" id="Joc-BQ-TyK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Gza-cO-ueB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="inj-eR-xnr" kind="relationship" relationship="rootViewController" id="J2g-Sf-AaA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrI-mh-pLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-563"/>
+        </scene>
         <!--Позвоночник-->
         <scene sceneID="dS5-pb-Or0">
             <objects>
-                <viewController storyboardIdentifier="BackboneVC" id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BackboneVC" id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJJ-md-QUh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,7 +291,7 @@
         <!--Title-->
         <scene sceneID="gZq-Z8-SBt">
             <objects>
-                <viewController storyboardIdentifier="DiagnosticItemVC" id="QgV-LR-ZFb" customClass="DiagnosticItemVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiagnosticItemVC" id="QgV-LR-ZFb" customClass="DiagnosticItemVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xyt-ce-UXk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

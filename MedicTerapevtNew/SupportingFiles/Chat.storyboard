@@ -41,7 +41,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здравствуйте!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-kb-2Xh" customClass="MessageLabel" customModule="MedicTerapevtNew" customModuleProvider="target">
-                                                    <rect key="frame" x="285" y="11" width="109" height="86"/>
+                                                    <rect key="frame" x="285.5" y="11" width="108.5" height="86"/>
                                                     <color key="backgroundColor" red="0.98431372549019602" green="0.68627450980392157" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +53,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W7-U6-zQB">
-                                                    <rect key="frame" x="253.5" y="84" width="23.5" height="13"/>
+                                                    <rect key="frame" x="249.5" y="84" width="28" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWA-HN-9u6">
-                                                    <rect key="frame" x="122" y="84" width="23.5" height="13"/>
+                                                    <rect key="frame" x="122" y="84" width="28" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Терапевт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-vj-zrI">
-                                                    <rect key="frame" x="55" y="11" width="46" height="20"/>
+                                                    <rect key="frame" x="55" y="11" width="48" height="20"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoi-Ic-Wpc">
-                                                    <rect key="frame" x="47" y="84" width="23.5" height="13"/>
+                                                    <rect key="frame" x="47" y="84" width="28" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-uf-CR0">
-                                                    <rect key="frame" x="33.5" y="84" width="23.5" height="13"/>
+                                                    <rect key="frame" x="29" y="84" width="28" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -302,14 +302,14 @@
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5kj-wq-5La">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="0.31747966999999999" green="0.82717031240000005" blue="0.99655574560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dih-4C-zvU">
                                 <rect key="frame" x="338" y="54.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="jhw-03-VJJ"/>
                                 </constraints>
-                                <color key="tintColor" red="0.97254901960784312" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button" image="Анализы иконка"/>
                                 <connections>
                                     <action selector="butDiagnosticTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="2p7-vj-82L"/>
@@ -321,7 +321,7 @@
                                     <constraint firstAttribute="width" constant="25" id="91f-W2-3TQ"/>
                                     <constraint firstAttribute="height" constant="25" id="Q2Q-SU-zc6"/>
                                 </constraints>
-                                <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button" image="Упражнения иконка"/>
                                 <connections>
                                     <action selector="butExercises:" destination="h2z-z8-INL" eventType="touchUpInside" id="jBk-6G-YQh"/>

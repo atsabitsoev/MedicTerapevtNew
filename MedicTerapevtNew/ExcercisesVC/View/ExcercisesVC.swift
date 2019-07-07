@@ -17,20 +17,29 @@ class ExcercisesVC: UIViewController {
     var segmentedControlShadow: UIView = UIView()
     
     
+    var patientID: String!
+    
+    
     var state = false {
         didSet {
-            
             currentExercises = state ? allExercises : myExercises
-            tableView.reloadData()
         }
     }
     var getExercisesService = GetExercisesService.standard
-    private var allExercises: [Exercise] = []
-    private var myExercises: [Exercise] = []
+    private var allExercises: [Exercise] = [] {
+        didSet {
+            currentExercises = state ? allExercises : myExercises
+        }
+    }
+    private var myExercises: [Exercise] = [] {
+        didSet {
+            currentExercises = state ? allExercises : myExercises
+        }
+    }
     var currentExercises: [Exercise] = [] {
-        
         didSet {
             loadingAnimation(state: false)
+            tableView.reloadData()
         }
     }
     
@@ -42,6 +51,7 @@ class ExcercisesVC: UIViewController {
         currentExercises = myExercises
         tableView.delaysContentTouches = false
         getExercisesService.sendGetAllExercisesRequest()
+        getExercisesService.sendGetPatientExercisesRequest(id: patientID)
     }
     
     
@@ -57,6 +67,10 @@ class ExcercisesVC: UIViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(allExercisesRequestAnswered),
                                                name: NSNotification.Name(NotificationNames.getAllExercisesRequestAnswered.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(getCurrentExercisesRequestAnswered),
+                                               name: NSNotification.Name(NotificationNames.getCurrentPatientExercisesRequestAnswered.rawValue),
                                                object: nil)
     }
     
@@ -101,6 +115,22 @@ class ExcercisesVC: UIViewController {
         allExercises = getExercisesService.allExercises!
     }
     
+    
+    @objc private func getCurrentExercisesRequestAnswered() {
+        
+        guard getExercisesService.errorGetPatientExcercises == nil else {
+            
+            let errorString = getExercisesService.errorGetPatientExcercises!
+            showErrorAlert(message: errorString)
+            return
+        }
+        
+        myExercises = getExercisesService.currentExercises!
+    }
+    
+    @IBAction func butCloseTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func stateChanged(_ sender: UISegmentedControl) {
         
