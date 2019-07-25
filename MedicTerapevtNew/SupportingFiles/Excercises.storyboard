@@ -74,7 +74,7 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-er-Ebk" customClass="AddDeleteButton" customModule="MedicTerapevtNew" customModuleProvider="target">
-                                                    <rect key="frame" x="345" y="115" width="36" height="36"/>
+                                                    <rect key="frame" x="337" y="107" width="36" height="36"/>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="K2H-JX-C71"/>
@@ -93,11 +93,11 @@
                                                 <constraint firstItem="hhG-oN-Opj" firstAttribute="top" secondItem="eC7-t3-yqe" secondAttribute="top" constant="8" id="8Nn-7m-fIx"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" id="B7y-fV-vKd"/>
                                                 <constraint firstItem="l6N-pP-eNM" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="CMp-ww-x1l"/>
-                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="bottom" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="-8" id="JDc-jQ-ZyV"/>
+                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="bottom" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="-16" id="JDc-jQ-ZyV"/>
                                                 <constraint firstItem="fyP-ON-1cM" firstAttribute="centerY" secondItem="hhG-oN-Opj" secondAttribute="centerY" id="PMh-jk-css"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="leading" secondItem="hhG-oN-Opj" secondAttribute="leading" id="QR5-r2-zAW"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="top" id="Z55-BW-a0Z"/>
-                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" constant="-8" id="gra-Dm-hVk"/>
+                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" constant="-16" id="gra-Dm-hVk"/>
                                                 <constraint firstItem="fyP-ON-1cM" firstAttribute="centerX" secondItem="eC7-t3-yqe" secondAttribute="centerX" id="odV-9a-nlM"/>
                                                 <constraint firstItem="l6N-pP-eNM" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="8" id="pIH-Nr-bGp"/>
                                                 <constraint firstItem="hhG-oN-Opj" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="uhC-kg-eh8"/>
