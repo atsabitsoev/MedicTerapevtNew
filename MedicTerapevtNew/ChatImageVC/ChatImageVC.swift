@@ -23,5 +23,11 @@ class ChatImageVC: UIViewController {
         imageViewMain.image = image
     }
     
-
+    
+    @IBAction func butCloseTapped(_ sender: UIButton) {
+        
+        self.dismiss(animated: true,
+                     completion: nil)
+    }
+    
 }

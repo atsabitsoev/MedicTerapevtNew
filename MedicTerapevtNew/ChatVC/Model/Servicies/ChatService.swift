@@ -88,13 +88,7 @@ class ChatService {
             print(json)
             
             let messagesJSON = json["messages"].arrayValue
-            let messages = messagesJSON.map({ (json) -> Message in
-                let message = Message(text: json["message"].string ?? "",
-                                      sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
-                                      time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
-                                      contentType: .text)
-                return message
-            })
+            let messages = self.parseMessagesFromJSON(messagesJSON: messagesJSON)
             
             MessageHistoryService.standard.messages = messages.reversed()
             NotificationManager.post(.messagesFetched)
@@ -108,10 +102,38 @@ class ChatService {
             let messageJSON = json["message"]
             
             guard messageJSON["author"].stringValue != TokenService.standard.id! else { return }
-            print("сооьщение из вне")
-            let messageText = messageJSON["message"].stringValue
             
-            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text)
+            let contentTypeString = messageJSON["type"].string
+            var contentType: MessageContentType = .text
+            var messageText = ""
+            var image: UIImage?
+            
+            switch contentTypeString {
+            case MessageContentType.text.rawValue:
+                
+                messageText = messageJSON["message"].stringValue
+                
+            case MessageContentType.photo.rawValue:
+                
+                let imageUrl = messageJSON["message"].stringValue
+                guard let imageData = try? Data(contentsOf: URL(string: "\(ApiInfo().baseUrl)\(imageUrl)")!) else { return }
+                image = UIImage(data: imageData)
+                contentType = .photo
+                
+            case MessageContentType.video.rawValue:
+                
+                let text = messageJSON["message"].stringValue
+                let videoUrl = "\(ApiInfo().baseUrl)\(text)"
+                messageText = videoUrl
+                contentType = .video
+                
+            default:
+                
+                print("error")
+                
+            }
+            
+            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: contentType, image: image)
         }
         
         socket.on("leavedDialog") { (data, ack) in
@@ -138,6 +160,29 @@ class ChatService {
         }
         
         
+    }
+    
+    
+    private func parseMessagesFromJSON(messagesJSON: [JSON]) -> [Message] {
+        
+        let messages = messagesJSON.map({ (json) -> Message in
+            
+            var image: UIImage?
+            if let url = URL(string: "\(ApiInfo().baseUrl)\(json["message"])"),
+                let imageData = try? Data(contentsOf: url) {
+                
+                image = UIImage(data: imageData)
+            }
+            
+            let message = Message(text: json["message"].string ?? "",
+                                  sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
+                                  time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
+                                  contentType: MessageContentType(rawValue: json["type"].stringValue) ?? .text,
+                                  image: image)
+            return message
+        })
+        
+        return messages
     }
     
     

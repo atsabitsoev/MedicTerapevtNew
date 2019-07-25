@@ -43,6 +43,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     private var chatService = ChatService.standard
+    var firstInit = true
     
     
     var titleString: String!
@@ -68,12 +69,14 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController!.setNavigationBarHidden(true, animated: animated)
-        scrollToBottom(animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
-        scrollToBottom(animated: false)
+        if firstInit {
+            scrollToBottom(animated: false)
+            firstInit = false
+        }
     }
     
     
@@ -274,6 +277,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
         chatService.exitFromChat()
+        MessageHistoryService.standard.messages = []
         self.navigationController?.popViewController(animated: true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }

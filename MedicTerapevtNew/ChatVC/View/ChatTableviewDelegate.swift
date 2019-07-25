@@ -45,17 +45,27 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageCell") as! UserImageCell
             let image = messageArr[indexPath.row].image
             cell.imageMain.image = image
-            cell.set(image: image!)
+            cell.set(image: image ?? UIImage())
             cell.labTime.text = formatter.string(from: message.time)
             return cell
-        
+            
         case (.penPal, .photo):
-        
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalImageCell") as! PenPalImageCell
             let image = messageArr[indexPath.row].image
             cell.imageMain.image = image
             cell.set(image: image!)
             cell.labTime.text = formatter.string(from: message.time)
+            return cell
+            
+        case (.user, .video):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserVideoCell")!
+            return cell
+            
+        case (.penPal, .video):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalVideoCell")!
             return cell
             
         }
