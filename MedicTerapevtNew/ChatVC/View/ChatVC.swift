@@ -46,7 +46,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     var titleString: String!
-    var patientID: String!
+    var patient: PatientItem!
     var messageArr: [Message] = []
     
     
@@ -55,6 +55,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         addObservers()
         configureView()
+        
+        chatService.enterChat(dialogId: patient.dialogId)
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
@@ -255,7 +257,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
         let diagnosticVC = storyboard.instantiateViewController(withIdentifier: "DiagnosticResultsVC") as! DiagnosticResultsVC
-        diagnosticVC.patientID = self.patientID
+        diagnosticVC.patientID = self.patient.id
         let navigationController = UINavigationController(rootViewController: diagnosticVC)
         self.present(navigationController, animated: true, completion: nil)
     }
@@ -264,14 +266,14 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         let storyboard = UIStoryboard(name: "Excercises", bundle: nil)
         let exercisesVC = storyboard.instantiateViewController(withIdentifier: "ExcercisesVC") as! ExcercisesVC
-        exercisesVC.patientID = self.patientID
+        exercisesVC.patientID = self.patient.id
         self.present(exercisesVC, animated: true, completion: nil)
     }
     
     
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
-        chatService.stopConnection()
+        chatService.exitFromChat()
         self.navigationController?.popViewController(animated: true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }

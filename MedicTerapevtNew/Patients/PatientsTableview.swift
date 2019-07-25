@@ -44,8 +44,15 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
         chatVC.titleString = patients[indexPath.row].name
-        chatVC.patientID = patients[indexPath.row].id
+        chatVC.patient = patients[indexPath.row]
         self.navigationController?.show(chatVC, sender: nil)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let patientCell = cell as! PatientItemCell
+        patientCell.layoutIfNeeded()
+        patientCell.imagePatient.layer.cornerRadius = patientCell.imagePatient.frame.height / 2
     }
     
     

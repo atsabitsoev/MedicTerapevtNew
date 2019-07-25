@@ -15,6 +15,7 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
+    
     var patients: [PatientItem] = []
     
 
@@ -25,6 +26,7 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
         self.tabBarController?.delegate = self
         
         addObservers()
+        ChatService.standard
         fetchPatients()
         tableView.reloadData()
     }

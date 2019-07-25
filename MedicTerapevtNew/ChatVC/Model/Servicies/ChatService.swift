@@ -40,7 +40,7 @@ class ChatService {
     private let manager = SocketManager(socketURL: URL(string: ApiInfo().baseUrl)!,
                                         config: [.secure(false),
                                                  .path("/socstream"),
-                                                 .log(true)])
+                                                 .log(false)])
     private var socket: SocketIOClient!
     private var name: String?
     private var resetAck: SocketAckEmitter?
@@ -76,14 +76,10 @@ class ChatService {
                 return
             }
             
-            let dialogId = dialogsArr.first!["id"].stringValue
-            print("dialog id - \(dialogId)")
-            
-            self.socket.emit("enterInDialog", ["dialogId" : dialogId],
-                             completion: {
-                
-                print("enterInDialogEmited")
+            let dialogIds = dialogsArr.map({ (json) -> String in
+                return json["id"].stringValue
             })
+            print("dialog id - \(dialogIds)")
         }
         
         socket.on("enteredDialog") { (data, ack) in
@@ -120,8 +116,7 @@ class ChatService {
         
         socket.on("leavedDialog") { (data, ack) in
             
-            let json = JSON(data[0])
-            print(json)
+            print("Покинул чат")
         }
         
         socket.on("newMessage") { (data, ack) in
@@ -156,8 +151,25 @@ class ChatService {
     }
     
     
-    func stopConnection() {
+    func enterChat(dialogId: String) {
         
+        self.socket.emit("enterInDialog", ["dialogId" : dialogId],
+                         completion: {
+                            
+                            print("enterInDialogEmited")
+        })
+    }
+    
+    
+    func exitFromChat() {
+        
+        socket.emit("exitFromChat" , []) {
+            print("Попытка выйти из чата")
+        }
+    }
+    
+    
+    func stopConnection() {
         
         socket.disconnect()
         socket.off(clientEvent: .connect)

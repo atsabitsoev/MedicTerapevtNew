@@ -52,8 +52,12 @@ class PatientsListService {
                             let name = json["name"].stringValue
                             let surname = json["surname"].stringValue
                             let conclusion = json["conclusion"].stringValue
+                            let dialogId = json["dialogId"].stringValue
                             
-                            let patient = PatientItem(id: id, name: "\(name) \(surname)", conclusion: conclusion)
+                            let patient = PatientItem(id: id,
+                                                      name: "\(name) \(surname)",
+                                                      conclusion: conclusion,
+                                                      dialogId: dialogId)
                             return patient
                         })
                         self.masPatients = patients

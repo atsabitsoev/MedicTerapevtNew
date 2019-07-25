@@ -20,14 +20,15 @@ class PatientItemCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layoutIfNeeded()
-        
-        imagePatient.layer.cornerRadius = imagePatient.bounds.height / 2
+        self.layoutIfNeeded()
     }
     
     
+    
+    
     override func awakeFromNib() {
-        imagePatient.layer.cornerRadius = imagePatient.bounds.height / 2
+        
+
     }
     
     
