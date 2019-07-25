@@ -151,6 +151,14 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            if json["messages"].arrayValue.count >= 30 {
+                let jsonMessages = json["messages"].arrayValue
+                let receivedMessages = self.parseMessagesFromJSON(messagesJSON: jsonMessages)
+                MessageHistoryService.standard.messages = receivedMessages.reversed() + MessageHistoryService.standard.messages
+            }
+            
+            NotificationManager.post(.messagesFetched)
         }
         
         socket.on("error-pipe") { (data, ack) in
@@ -188,11 +196,49 @@ class ChatService {
     
     func sendMessage(_ message: Message) {
         
-        socket.emit("message", ["message": message.text]) {
-            print("отправлено")
+        var messageText = ""
+        var type = ""
+        
+        switch message.contentType {
+            
+        case .text:
+            
+            messageText = message.text
+            type = "text"
+            
+        case .photo:
+            
+            let image = message.image
+            let imageData = image?.jpegData(compressionQuality: 0.5)
+            let imageBase64 = imageData!.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+            print(imageBase64)
+            messageText = "data:image/jpg;base64,\(imageBase64)"
+            type = "photo"
+            
+        case .video:
+            
+            guard let videoUrl = URL(string: message.text) else { return }
+            guard let videoData = try? Data(contentsOf: videoUrl) else { return }
+            let videoBase64 = videoData.base64EncodedString(options: .lineLength64Characters)
+            messageText = "data:video/mp4;base64,\(videoBase64)"
+            print(videoBase64)
+            type = "video"
+            
+        }
+        
+        socket.emit("message", ["message": messageText,
+                                "type": type]) {
+                                    print("отправлено")
         }
         
         print(["message": message.text])
+    }
+    
+    
+    func loadMoreMessages() {
+        
+        socket.emit("getMessageList", ["skip": MessageHistoryService.standard.messages.count,
+                                       "limit": 30])
     }
     
     

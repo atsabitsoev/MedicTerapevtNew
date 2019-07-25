@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 
 extension ChatVC: UITableViewDelegate, UITableViewDataSource {
@@ -81,6 +83,35 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             let chatImageVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatImageVC") as! ChatImageVC
             chatImageVC.image = image
             self.present(chatImageVC, animated: true, completion: nil)
+        }
+        
+        if messageArr[indexPath.row].contentType == .video {
+            
+            let messageVideo = messageArr[indexPath.row]
+            guard var videoUrl: URL = URL(string: "\(messageVideo.text)") else { return }
+            if !messageVideo.text.hasPrefix("file") {
+                if !"\(videoUrl)".hasPrefix("http") {
+                    videoUrl = URL(string: "\(ApiInfo().baseUrl)\(messageVideo.text)")!
+                } else {
+                    videoUrl = URL(string: "\(messageVideo.text)")!
+                }
+                
+            }
+            
+            print(videoUrl)
+            let player = AVPlayer(url: videoUrl)
+            let playerVC = AVPlayerViewController()
+            playerVC.player = player
+            self.present(playerVC,
+                         animated: true,
+                         completion: nil)
+        }
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y == 0 && !allMessagesGot {
+            ChatService.standard.loadMoreMessages()
         }
     }
     

@@ -44,6 +44,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     private var chatService = ChatService.standard
     var firstInit = true
+    var allMessagesGot = false
     
     
     var titleString: String!
@@ -63,7 +64,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         tableView.rowHeight = UITableView.automaticDimension
         
         updateVisibleMessages()
-        activityIndicator.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,7 +109,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @objc private func showHistoryMessages() {
         
         updateVisibleMessages()
-        scrollToBottom(animated: false)
+        activityIndicator.stopAnimating()
     }
     
     @objc private func showRecievedMessage() {
@@ -121,7 +121,24 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private func updateVisibleMessages() {
         
         messageArr = MessageHistoryService.standard.messages
+        reload(tableView: tableView)
+        if messageArr.count % 30 > 0 {
+            allMessagesGot = true
+        }
+    }
+    
+    func reload(tableView: UITableView) {
+        
         tableView.reloadData()
+        tableView.layoutIfNeeded()
+        let currentRow = (MessageHistoryService.standard.messages.count % 30 == 0) ? 29 : MessageHistoryService.standard.messages.count % 30 - 1
+        
+        if MessageHistoryService.standard.messages.count != 0 {
+            tableView.scrollToRow(at: IndexPath(row: currentRow,
+                                                section: 0),
+                                  at: .top,
+                                  animated: false)
+        }
     }
     
     
@@ -227,9 +244,31 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let message = Message(text: "",
+                                  sender: .user,
+                                  time: Date(),
+                                  contentType: .photo,
+                                  image: pickedImage)
+            chatService.sendMessage(message)
             visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
             self.dismiss(animated: true, completion: nil)
+            
+        } else if let pickedVideo = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
+            
+            print("Видео")
+            let pickedVideoString = "\(pickedVideo)"
+            let message = Message(text: pickedVideoString,
+                                  sender: .user,
+                                  time: Date(),
+                                  contentType: .video)
+            chatService.sendMessage(message)
+            visualiseSendingMessage(text: pickedVideoString,
+                                    time: Date(),
+                                    contentType: .video)
+            self.dismiss(animated: true,
+                         completion: nil)
         }
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

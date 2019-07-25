@@ -30,4 +30,7 @@ class ChatImageVC: UIViewController {
                      completion: nil)
     }
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
 }
