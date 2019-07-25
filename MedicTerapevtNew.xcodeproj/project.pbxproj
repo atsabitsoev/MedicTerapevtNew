@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC008DE522EA53CE0071AD20 /* AddDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC008DE422EA53CE0071AD20 /* AddDeleteButton.swift */; };
 		AC1E5DCA22B8CC4A00B7E09D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5DC922B8CC4A00B7E09D /* AppDelegate.swift */; };
 		AC1E5DD122B8CC4B00B7E09D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5DD022B8CC4B00B7E09D /* Assets.xcassets */; };
 		AC1E5DD422B8CC4B00B7E09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1E5DD222B8CC4B00B7E09D /* LaunchScreen.storyboard */; };
@@ -94,6 +95,7 @@
 /* Begin PBXFileReference section */
 		612CAD70381534D3AB4DE93A /* Pods-MedicTerapevtNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicTerapevtNew.release.xcconfig"; path = "Target Support Files/Pods-MedicTerapevtNew/Pods-MedicTerapevtNew.release.xcconfig"; sourceTree = "<group>"; };
 		8999227EB26D818EFE3C03B0 /* Pods-MedicTerapevtNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicTerapevtNew.debug.xcconfig"; path = "Target Support Files/Pods-MedicTerapevtNew/Pods-MedicTerapevtNew.debug.xcconfig"; sourceTree = "<group>"; };
+		AC008DE422EA53CE0071AD20 /* AddDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeleteButton.swift; sourceTree = "<group>"; };
 		AC1E5DC622B8CC4A00B7E09D /* MedicTerapevtNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicTerapevtNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1E5DC922B8CC4A00B7E09D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1E5DD022B8CC4B00B7E09D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				AC76EF0022D24E7800027FE6 /* ViewPlay.swift */,
+				AC008DE422EA53CE0071AD20 /* AddDeleteButton.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				ACE547FB22C108FC009BD2FB /* MessageHistoryService.swift in Sources */,
 				ACE547E022C0DA16009BD2FB /* ChatImageVC.swift in Sources */,
 				AC1E5E0122B8CCEE00B7E09D /* RegistrationTFDelegate.swift in Sources */,
+				AC008DE522EA53CE0071AD20 /* AddDeleteButton.swift in Sources */,
 				AC1E5E1622B8CF3F00B7E09D /* EnterTFDelegate.swift in Sources */,
 				AC626D4F22BCDD85003ED8BD /* ProfileVC.swift in Sources */,
 				AC76EF1622D24E7900027FE6 /* DiagnosticConclusionCell.swift in Sources */,

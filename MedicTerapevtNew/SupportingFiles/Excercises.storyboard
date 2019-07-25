@@ -73,15 +73,31 @@
                                                         <constraint firstAttribute="width" constant="36" id="Iao-uU-DZe"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-er-Ebk" customClass="AddDeleteButton" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                                    <rect key="frame" x="345" y="115" width="36" height="36"/>
+                                                    <color key="backgroundColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="K2H-JX-C71"/>
+                                                        <constraint firstAttribute="width" constant="36" id="OkI-Lr-1JG"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="18"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" constant="25" id="7yf-4z-AhO"/>
                                                 <constraint firstItem="hhG-oN-Opj" firstAttribute="top" secondItem="eC7-t3-yqe" secondAttribute="top" constant="8" id="8Nn-7m-fIx"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" id="B7y-fV-vKd"/>
                                                 <constraint firstItem="l6N-pP-eNM" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="CMp-ww-x1l"/>
+                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="bottom" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="-8" id="JDc-jQ-ZyV"/>
                                                 <constraint firstItem="fyP-ON-1cM" firstAttribute="centerY" secondItem="hhG-oN-Opj" secondAttribute="centerY" id="PMh-jk-css"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="leading" secondItem="hhG-oN-Opj" secondAttribute="leading" id="QR5-r2-zAW"/>
                                                 <constraint firstItem="VBg-rD-z0r" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="top" id="Z55-BW-a0Z"/>
+                                                <constraint firstItem="R5V-er-Ebk" firstAttribute="trailing" secondItem="hhG-oN-Opj" secondAttribute="trailing" constant="-8" id="gra-Dm-hVk"/>
                                                 <constraint firstItem="fyP-ON-1cM" firstAttribute="centerX" secondItem="eC7-t3-yqe" secondAttribute="centerX" id="odV-9a-nlM"/>
                                                 <constraint firstItem="l6N-pP-eNM" firstAttribute="top" secondItem="hhG-oN-Opj" secondAttribute="bottom" constant="8" id="pIH-Nr-bGp"/>
                                                 <constraint firstItem="hhG-oN-Opj" firstAttribute="leading" secondItem="eC7-t3-yqe" secondAttribute="leading" constant="25" id="uhC-kg-eh8"/>
@@ -89,6 +105,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="butAddDelete" destination="R5V-er-Ebk" id="SZL-Ai-QYk"/>
                                             <outlet property="imagePreview" destination="hhG-oN-Opj" id="xl7-f0-U4B"/>
                                             <outlet property="labTitle" destination="l6N-pP-eNM" id="vcj-yJ-P0y"/>
                                             <outlet property="viewPlay" destination="fyP-ON-1cM" id="QQP-Lx-zep"/>

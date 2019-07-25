@@ -72,6 +72,37 @@ class ExcercisesVC: UIViewController {
                                                selector: #selector(getCurrentExercisesRequestAnswered),
                                                name: NSNotification.Name(NotificationNames.getCurrentPatientExercisesRequestAnswered.rawValue),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(addExerciseAnswered),
+                                               name: NSNotification.Name(NotificationNames.addExerciseRequestAnswered.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(removeExerciseAnswered),
+                                               name: NSNotification.Name(NotificationNames.removeExerciseRequestAnswered.rawValue),
+                                               object: nil)
+    }
+    
+    
+    @objc private func addExerciseAnswered() {
+        
+        guard getExercisesService.addExerciseError == nil else {
+            
+            showErrorAlert(message: getExercisesService.addExerciseError)
+            return
+        }
+        
+        showSuccessAlert(message: "Упражнение добавлено!")
+    }
+    
+    @objc private func removeExerciseAnswered() {
+        
+        guard getExercisesService.removeExerciseError == nil else {
+            
+            showErrorAlert(message: getExercisesService.removeExerciseError)
+            return
+        }
+        
+        showSuccessAlert(message: "Упражнение удалено!")
     }
     
 
@@ -91,6 +122,21 @@ class ExcercisesVC: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func showSuccessAlert(message: String) {
+        
+        let alert = UIAlertController(title: "Успех",
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок",
+                                     style: .default,
+                                     handler: nil)
+        alert.addAction(okAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+    
     
     private func loadingAnimation(state: Bool) {
         

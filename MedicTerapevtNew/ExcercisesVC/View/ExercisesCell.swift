@@ -15,12 +15,12 @@ class ExercisesCell: UITableViewCell {
     @IBOutlet weak var labTitle: UILabel!
     @IBOutlet weak var viewPlay: ViewPlay!
     @IBOutlet weak var viewShadow: ViewUnderTextFields!
+    @IBOutlet weak var butAddDelete: AddDeleteButton!
     
     
     override func layoutSubviews() {
         
         configureImagePreview()
-        
     }
     
     

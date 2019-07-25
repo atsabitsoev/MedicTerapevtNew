@@ -14,14 +14,17 @@ class Exercise {
     var name: String
     var preview: URL
     var video: URL
+    var id: String
     
     
     init(name: String,
          preview: URL,
-         video: URL) {
+         video: URL,
+         id: String) {
         
         self.name = name
         self.preview = preview
         self.video = video
+        self.id = id
     }
 }

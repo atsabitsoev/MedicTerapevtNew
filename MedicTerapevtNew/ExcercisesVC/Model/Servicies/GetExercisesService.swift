@@ -23,6 +23,9 @@ class GetExercisesService {
     var currentExercises: [Exercise]?
     var errorGetPatientExcercises: String?
     
+    var addExerciseError: String?
+    var removeExerciseError: String?
+    
     
     func sendGetAllExercisesRequest() {
         
@@ -121,6 +124,72 @@ class GetExercisesService {
     }
     
     
+    func addExercise(patientId: String, exerciseId: String) {
+        
+        let url = "\(ApiInfo().baseUrl)/patient/\(patientId)/exercise/\(exerciseId)/append"
+        let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: headers,
+                   interceptor: nil)
+            .responseJSON { (response) in
+                
+                do {
+                    
+                    let responseValue = try response.result.get()
+                    let json = JSON(responseValue)
+                    print(json)
+                        
+                    self.addExerciseError = json["data"]["result"].boolValue ? nil : json["message"].string
+                    
+                } catch {
+                    
+                    let errorString = error.localizedDescription
+                    print(errorString)
+                    self.addExerciseError = errorString
+                }
+                
+                NotificationManager.post(.addExerciseRequestAnswered)
+        }
+    }
+    
+    
+    func removeExercise(patientId: String, exerciseId: String) {
+        
+        let url = "\(ApiInfo().baseUrl)/patient/\(patientId)/exercise/\(exerciseId)/remove"
+        let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: headers,
+                   interceptor: nil)
+            .responseJSON { (response) in
+                
+                do {
+                    
+                    let responseValue = try response.result.get()
+                    let json = JSON(responseValue)
+                    print(json)
+                    
+                    self.removeExerciseError = json["data"]["result"].boolValue ? nil : json["message"].string
+                    
+                } catch {
+                    
+                    let errorString = error.localizedDescription
+                    print(errorString)
+                    self.removeExerciseError = errorString
+                }
+                
+                NotificationManager.post(.removeExerciseRequestAnswered)
+        }
+    }
+    
+    
     private func parseExercises(json: [JSON]) -> [Exercise] {
         
         return json.map({ (json) -> Exercise in
@@ -132,7 +201,9 @@ class GetExercisesService {
             let videoUrl = URL(string: "\(ApiInfo().baseUrl)\(videoString)")!
             let name = json["name"].stringValue
             
-            return Exercise(name: name, preview: previewUrl, video: videoUrl)
+            let id = json["id"].stringValue
+            
+            return Exercise(name: name, preview: previewUrl, video: videoUrl, id: id)
         })
     }
     

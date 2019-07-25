@@ -29,6 +29,16 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
         let imageData = try! Data(contentsOf: imageUrl)
         cell.imagePreview.image = UIImage(data: imageData)
         
+        cell.butAddDelete.aDButtonState = state ? .add : .delete
+        cell.butAddDelete.addAction = {
+            self.getExercisesService.addExercise(patientId: self.patientID,
+                                                 exerciseId: self.currentExercises[indexPath.row].id)
+        }
+        cell.butAddDelete.deleteAction = {
+            self.getExercisesService.removeExercise(patientId: self.patientID,
+                                                    exerciseId: self.currentExercises[indexPath.row].id)
+        }
+        
         return cell
     }
     
