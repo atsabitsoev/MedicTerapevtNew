@@ -18,6 +18,10 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ProfileService.standard.getProfile()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
     }
     
     override func viewWillLayoutSubviews() {

@@ -42,4 +42,7 @@ enum NotificationNames: String {
     case addExerciseRequestAnswered = "addExerciseRequestAnswered"
     case removeExerciseRequestAnswered = "removeExerciseRequestAnswered"
     
+    case getDoctorProfileRequestAnswered = "getDoctorProfileRequestAnswered"
+    case updateDoctorProfileRequestAnswered = "updateDoctorProfileRequestAnswered"
+    
 }

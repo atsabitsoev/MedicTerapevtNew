@@ -13,6 +13,9 @@
         <array key="SF-Compact-Rounded-Bold.otf">
             <string>SFCompactRounded-Bold</string>
         </array>
+        <array key="SF-Compact-Rounded-Medium.otf">
+            <string>SFCompactRounded-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Профиль-->
@@ -65,23 +68,146 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeQ-BD-h4A" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="45" y="703.5" width="324" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-jw-BMb" customClass="ButtonGradient" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="45" y="703.5" width="324" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CR4-1Z-7Xe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useShadow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needImage" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejL-2g-08o">
+                                <rect key="frame" x="183.5" y="765.5" width="47" height="29.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Выход">
+                                            <attributes>
+                                                <color key="NSColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="28">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="84">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="140">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="196">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="252">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="308">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                                <integer key="NSUnderline" value="1"/>
+                                                <color key="NSUnderlineColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-eL-cXE" customClass="ViewRoundedBorders" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                <rect key="frame" x="152.5" y="290" width="243.5" height="47"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lYW-Ex-5Gx">
+                                        <rect key="frame" x="18" y="0.0" width="207.5" height="47"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lYW-Ex-5Gx" firstAttribute="leading" secondItem="eNh-eL-cXE" secondAttribute="leading" constant="18" id="JKf-YL-i0s"/>
+                                    <constraint firstAttribute="height" constant="47" id="JiV-b1-9ZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="lYW-Ex-5Gx" secondAttribute="trailing" constant="18" id="Lez-i9-hZU"/>
+                                    <constraint firstItem="lYW-Ex-5Gx" firstAttribute="top" secondItem="eNh-eL-cXE" secondAttribute="top" id="V84-Lp-IW7"/>
+                                    <constraint firstAttribute="bottom" secondItem="lYW-Ex-5Gx" secondAttribute="bottom" id="o1f-ki-pdF"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Позиция" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX7-Oq-vuC">
+                                <rect key="frame" x="18" y="290" width="73.5" height="47"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eyM-jw-BMb" firstAttribute="leading" secondItem="cKJ-Xo-QXe" secondAttribute="leading" constant="45" id="3Rj-hv-mQl"/>
                             <constraint firstItem="5SK-ZO-3aW" firstAttribute="top" secondItem="cKJ-Xo-QXe" secondAttribute="top" constant="8" id="6ga-Z7-KFb"/>
+                            <constraint firstItem="cKJ-Xo-QXe" firstAttribute="bottom" secondItem="ejL-2g-08o" secondAttribute="bottom" constant="18" id="CMh-gp-uGF"/>
                             <constraint firstItem="5SK-ZO-3aW" firstAttribute="width" secondItem="Rms-t8-B8M" secondAttribute="height" multiplier="1:2" id="CaD-v7-Rjo"/>
+                            <constraint firstItem="uX7-Oq-vuC" firstAttribute="top" secondItem="eNh-eL-cXE" secondAttribute="top" id="Egp-Y1-Otc"/>
                             <constraint firstItem="5SK-ZO-3aW" firstAttribute="leading" secondItem="k70-C1-tvD" secondAttribute="trailing" constant="18" id="GTI-Um-3ss"/>
+                            <constraint firstItem="cKJ-Xo-QXe" firstAttribute="trailing" secondItem="eNh-eL-cXE" secondAttribute="trailing" constant="18" id="Itz-dd-NCG"/>
                             <constraint firstItem="cKJ-Xo-QXe" firstAttribute="trailing" secondItem="5SK-ZO-3aW" secondAttribute="trailing" constant="45" id="JkY-Vc-k1X"/>
                             <constraint firstItem="k70-C1-tvD" firstAttribute="leading" secondItem="Rms-t8-B8M" secondAttribute="leading" constant="18" id="Klg-7S-pDi"/>
+                            <constraint firstItem="ejL-2g-08o" firstAttribute="top" secondItem="eyM-jw-BMb" secondAttribute="bottom" constant="18" id="KrP-7S-0eK"/>
                             <constraint firstItem="Rms-t8-B8M" firstAttribute="height" secondItem="9nL-jQ-eI0" secondAttribute="height" multiplier="241:812" id="Pmk-lO-QwF"/>
+                            <constraint firstItem="KeQ-BD-h4A" firstAttribute="trailing" secondItem="eyM-jw-BMb" secondAttribute="trailing" id="Pmt-oc-xH7"/>
                             <constraint firstItem="Rms-t8-B8M" firstAttribute="top" secondItem="9nL-jQ-eI0" secondAttribute="top" id="Shd-44-uqf"/>
+                            <constraint firstItem="ejL-2g-08o" firstAttribute="centerX" secondItem="9nL-jQ-eI0" secondAttribute="centerX" id="Tbs-7P-elv"/>
                             <constraint firstItem="ujg-kD-B4s" firstAttribute="trailing" secondItem="5SK-ZO-3aW" secondAttribute="trailing" id="VYJ-aY-zew"/>
+                            <constraint firstItem="KeQ-BD-h4A" firstAttribute="bottom" secondItem="eyM-jw-BMb" secondAttribute="bottom" id="YAI-b8-lSA"/>
                             <constraint firstItem="ujg-kD-B4s" firstAttribute="top" secondItem="5SK-ZO-3aW" secondAttribute="top" id="ZpO-CI-lBT"/>
                             <constraint firstItem="Rms-t8-B8M" firstAttribute="trailing" secondItem="cKJ-Xo-QXe" secondAttribute="trailing" id="aHu-49-REo"/>
                             <constraint firstItem="Rms-t8-B8M" firstAttribute="leading" secondItem="cKJ-Xo-QXe" secondAttribute="leading" id="avg-Mn-8UD"/>
+                            <constraint firstItem="KeQ-BD-h4A" firstAttribute="top" secondItem="eyM-jw-BMb" secondAttribute="top" id="avm-Ul-1D0"/>
+                            <constraint firstItem="eNh-eL-cXE" firstAttribute="width" secondItem="9nL-jQ-eI0" secondAttribute="width" multiplier="1:1.7" id="dkg-n6-3YL"/>
+                            <constraint firstItem="eNh-eL-cXE" firstAttribute="top" secondItem="Rms-t8-B8M" secondAttribute="bottom" constant="24" id="fol-Cc-qm7"/>
                             <constraint firstItem="ujg-kD-B4s" firstAttribute="leading" secondItem="5SK-ZO-3aW" secondAttribute="leading" id="gI5-e1-myS"/>
+                            <constraint firstItem="uX7-Oq-vuC" firstAttribute="leading" secondItem="cKJ-Xo-QXe" secondAttribute="leading" constant="18" id="iES-aG-WRR"/>
+                            <constraint firstItem="eNh-eL-cXE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uX7-Oq-vuC" secondAttribute="trailing" constant="8" id="jec-7E-tnt"/>
                             <constraint firstItem="ujg-kD-B4s" firstAttribute="bottom" secondItem="5SK-ZO-3aW" secondAttribute="bottom" id="mhk-8A-Weg"/>
                             <constraint firstItem="k70-C1-tvD" firstAttribute="centerY" secondItem="5SK-ZO-3aW" secondAttribute="centerY" id="oBt-VH-xte"/>
+                            <constraint firstItem="KeQ-BD-h4A" firstAttribute="leading" secondItem="eyM-jw-BMb" secondAttribute="leading" id="p6E-7J-hWM"/>
+                            <constraint firstItem="cKJ-Xo-QXe" firstAttribute="trailing" secondItem="eyM-jw-BMb" secondAttribute="trailing" constant="45" id="q4G-la-2ki"/>
+                            <constraint firstItem="uX7-Oq-vuC" firstAttribute="bottom" secondItem="eNh-eL-cXE" secondAttribute="bottom" id="wtB-6C-CQ0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cKJ-Xo-QXe"/>
                     </view>

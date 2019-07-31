@@ -55,6 +55,9 @@
 		AC626D4F22BCDD85003ED8BD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */; };
 		AC626D5122BCDDC2003ED8BD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */; };
 		AC626D5622BCDE8C003ED8BD /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */; };
+		AC6BCA5822F1B3A800CE5F12 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BCA5722F1B3A800CE5F12 /* ProfileService.swift */; };
+		AC6BCA5A22F1BFE600CE5F12 /* DoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BCA5922F1BFE600CE5F12 /* DoctorProfile.swift */; };
+		AC6BCA5C22F1C89F00CE5F12 /* ViewRoundedBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BCA5B22F1C89F00CE5F12 /* ViewRoundedBorders.swift */; };
 		AC76EEF222D24E6900027FE6 /* Excercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC76EEF022D24E6800027FE6 /* Excercises.storyboard */; };
 		AC76EEF322D24E6900027FE6 /* DiagnosticResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC76EEF122D24E6900027FE6 /* DiagnosticResults.storyboard */; };
 		AC76EF0D22D24E7900027FE6 /* GetExercisesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76EEF822D24E7800027FE6 /* GetExercisesService.swift */; };
@@ -145,6 +148,9 @@
 		AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		AC6BCA5722F1B3A800CE5F12 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		AC6BCA5922F1BFE600CE5F12 /* DoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfile.swift; sourceTree = "<group>"; };
+		AC6BCA5B22F1C89F00CE5F12 /* ViewRoundedBorders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRoundedBorders.swift; sourceTree = "<group>"; };
 		AC76EEF022D24E6800027FE6 /* Excercises.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Excercises.storyboard; sourceTree = "<group>"; };
 		AC76EEF122D24E6900027FE6 /* DiagnosticResults.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiagnosticResults.storyboard; sourceTree = "<group>"; };
 		AC76EEF822D24E7800027FE6 /* GetExercisesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetExercisesService.swift; sourceTree = "<group>"; };
@@ -408,8 +414,8 @@
 		AC626D4D22BCDD6D003ED8BD /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
-				AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */,
-				AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */,
+				AC6BCA5622F1B39500CE5F12 /* View */,
+				AC6BCA5522F1B38C00CE5F12 /* Model */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -420,6 +426,25 @@
 				AC626D5522BCDE8C003ED8BD /* ImageViewExtension.swift */,
 			);
 			path = GlobalExtensions;
+			sourceTree = "<group>";
+		};
+		AC6BCA5522F1B38C00CE5F12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BCA5722F1B3A800CE5F12 /* ProfileService.swift */,
+				AC6BCA5922F1BFE600CE5F12 /* DoctorProfile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC6BCA5622F1B39500CE5F12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC626D4E22BCDD85003ED8BD /* ProfileVC.swift */,
+				AC626D5022BCDDC2003ED8BD /* ProfileHeaderView.swift */,
+				AC6BCA5B22F1C89F00CE5F12 /* ViewRoundedBorders.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AC76EEF422D24E7800027FE6 /* ExcercisesVC */ = {
@@ -794,6 +819,7 @@
 				AC1E5E0922B8CCEE00B7E09D /* EnterService.swift in Sources */,
 				AC76EF0D22D24E7900027FE6 /* GetExercisesService.swift in Sources */,
 				AC1E5E0722B8CCEE00B7E09D /* Gradient.swift in Sources */,
+				AC6BCA5A22F1BFE600CE5F12 /* DoctorProfile.swift in Sources */,
 				AC76EF1722D24E7900027FE6 /* ViewGradientHeader.swift in Sources */,
 				AC76EF1F22D251EA00027FE6 /* DiagnosticItemVC.swift in Sources */,
 				AC1E5E3F22B8DD0D00B7E09D /* PatientItem.swift in Sources */,
@@ -804,6 +830,7 @@
 				AC1E5E0C22B8CCEE00B7E09D /* RegistrationService.swift in Sources */,
 				AC1E5E3C22B8DC9E00B7E09D /* PatientsTableview.swift in Sources */,
 				AC1E5E0A22B8CCEE00B7E09D /* Colors.swift in Sources */,
+				AC6BCA5C22F1C89F00CE5F12 /* ViewRoundedBorders.swift in Sources */,
 				AC1E5E2422B8D64400B7E09D /* GradientNavigationBar.swift in Sources */,
 				ACE5480422C108FC009BD2FB /* PenPalImageCell.swift in Sources */,
 				AC1E5DF922B8CCEE00B7E09D /* WaveGradientView.swift in Sources */,
@@ -830,6 +857,7 @@
 				AC76EF1E22D251EA00027FE6 /* BackboneVC.swift in Sources */,
 				AC1E5E4122B8DDDA00B7E09D /* PatientItemCell.swift in Sources */,
 				AC1E5E0D22B8CCEE00B7E09D /* TokenService.swift in Sources */,
+				AC6BCA5822F1B3A800CE5F12 /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
