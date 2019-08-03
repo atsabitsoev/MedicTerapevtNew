@@ -72,13 +72,15 @@ class DiagnosticService {
                             })
                             
                             let conclusion = result["conclusion"].stringValue
+                            let id = result["id"].stringValue
                             let dateInt = result["created"].doubleValue
                             let date = Date(timeIntervalSince1970: dateInt / 1000)
                             
                             let diagnosticInfo = DiagnosticInfo(backbone: backboneArr,
                                                                 otherInfo: otherArr,
                                                                 conclusion: conclusion,
-                                                                date: date)
+                                                                date: date,
+                                                                id: id)
                             masDiagnosticInfo.append(diagnosticInfo)
                         }
                         

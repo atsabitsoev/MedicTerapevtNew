@@ -77,6 +77,31 @@
                                                             <color key="textColor" red="0.41531277949975326" green="0.42031654792746109" blue="0.42031654792746109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-Q9-Yp7" customClass="ViewUnderTextFields" customModule="MedicTerapevtNew" customModuleProvider="target">
+                                                            <rect key="frame" x="13" y="10" width="76" height="76"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                                                    <color key="value" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-pe-XT5">
+                                                            <rect key="frame" x="13" y="10" width="76" height="76"/>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="45"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -84,14 +109,22 @@
                                                         <constraint firstItem="65M-E8-l8t" firstAttribute="leading" secondItem="jzL-89-T8X" secondAttribute="trailing" constant="13" id="Bmq-cE-j2g"/>
                                                         <constraint firstItem="fRP-s0-TPV" firstAttribute="bottom" secondItem="jzL-89-T8X" secondAttribute="bottom" id="G3a-Eg-g9z"/>
                                                         <constraint firstItem="hTM-7w-EvK" firstAttribute="leading" secondItem="65M-E8-l8t" secondAttribute="leading" id="UsA-8C-NGZ"/>
+                                                        <constraint firstItem="HC0-pe-XT5" firstAttribute="leading" secondItem="kb3-Q9-Yp7" secondAttribute="leading" id="YLA-j1-2KA"/>
+                                                        <constraint firstItem="HC0-pe-XT5" firstAttribute="top" secondItem="kb3-Q9-Yp7" secondAttribute="top" id="anW-bu-OaN"/>
                                                         <constraint firstItem="fRP-s0-TPV" firstAttribute="top" secondItem="jzL-89-T8X" secondAttribute="top" id="bGt-AQ-1Mz"/>
+                                                        <constraint firstItem="kb3-Q9-Yp7" firstAttribute="leading" secondItem="fRP-s0-TPV" secondAttribute="leading" id="bas-dX-Snl"/>
                                                         <constraint firstItem="65M-E8-l8t" firstAttribute="width" secondItem="JWV-7D-cGS" secondAttribute="width" multiplier="244:347" id="cV5-e1-3lK"/>
+                                                        <constraint firstItem="kb3-Q9-Yp7" firstAttribute="bottom" secondItem="fRP-s0-TPV" secondAttribute="bottom" id="ejv-LD-TdB"/>
                                                         <constraint firstAttribute="trailing" secondItem="65M-E8-l8t" secondAttribute="trailing" constant="13" id="hCa-Xz-V2G"/>
                                                         <constraint firstItem="jzL-89-T8X" firstAttribute="leading" secondItem="JWV-7D-cGS" secondAttribute="leading" constant="13" id="iVi-HQ-mqe"/>
+                                                        <constraint firstItem="HC0-pe-XT5" firstAttribute="trailing" secondItem="kb3-Q9-Yp7" secondAttribute="trailing" id="j4N-Qh-hxF"/>
+                                                        <constraint firstItem="HC0-pe-XT5" firstAttribute="bottom" secondItem="kb3-Q9-Yp7" secondAttribute="bottom" id="jMs-LS-Bme"/>
                                                         <constraint firstItem="hTM-7w-EvK" firstAttribute="top" secondItem="JWV-7D-cGS" secondAttribute="top" constant="10" id="jsd-xg-NLd"/>
                                                         <constraint firstItem="fRP-s0-TPV" firstAttribute="leading" secondItem="jzL-89-T8X" secondAttribute="leading" id="kAS-9m-tn1"/>
                                                         <constraint firstAttribute="height" constant="146" id="l9J-uH-Hhi"/>
+                                                        <constraint firstItem="kb3-Q9-Yp7" firstAttribute="top" secondItem="fRP-s0-TPV" secondAttribute="top" id="nC2-1k-kwr"/>
                                                         <constraint firstItem="jzL-89-T8X" firstAttribute="top" secondItem="JWV-7D-cGS" secondAttribute="top" constant="10" id="q9T-A0-YjI"/>
+                                                        <constraint firstItem="kb3-Q9-Yp7" firstAttribute="trailing" secondItem="fRP-s0-TPV" secondAttribute="trailing" id="tgd-wz-jaY"/>
                                                         <constraint firstAttribute="bottom" secondItem="65M-E8-l8t" secondAttribute="bottom" constant="8" id="uMa-1e-KOh"/>
                                                         <constraint firstItem="65M-E8-l8t" firstAttribute="top" secondItem="hTM-7w-EvK" secondAttribute="bottom" constant="8" id="ucl-eG-pZS"/>
                                                         <constraint firstAttribute="trailing" secondItem="hTM-7w-EvK" secondAttribute="trailing" constant="13" id="x64-nu-Gsk"/>
@@ -118,7 +151,9 @@
                                         <connections>
                                             <outlet property="imagePatient" destination="jzL-89-T8X" id="G4U-BO-rK5"/>
                                             <outlet property="labDescribtion" destination="65M-E8-l8t" id="vqd-79-6p2"/>
+                                            <outlet property="labMessageCount" destination="HC0-pe-XT5" id="uI5-2j-2VP"/>
                                             <outlet property="labName" destination="hTM-7w-EvK" id="lzL-tS-uTk"/>
+                                            <outlet property="viewDarkRound" destination="kb3-Q9-Yp7" id="Q4V-Wf-I7t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

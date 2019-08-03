@@ -45,4 +45,7 @@ enum NotificationNames: String {
     case getDoctorProfileRequestAnswered = "getDoctorProfileRequestAnswered"
     case updateDoctorProfileRequestAnswered = "updateDoctorProfileRequestAnswered"
     
+    case newUnreadMessage = "newUnreadMessage"
+    case changeConclusionRequestAnswered = "changeConclusionRequestAnswered"
+    
 }

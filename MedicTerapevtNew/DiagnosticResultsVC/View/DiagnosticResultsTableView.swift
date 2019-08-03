@@ -98,6 +98,15 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.show(diagnosticItemVC, sender: nil)
             
             
+        } else {
+            
+            let currentInfo = masDiagnosticInfo[indexPath.section]
+            let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
+            let editConclusionVC = storyboard.instantiateViewController(withIdentifier: "EditConclusionVC") as! EditConclusionVC
+            editConclusionVC.conclusion = currentInfo.conclusion
+            editConclusionVC.infoId = currentInfo.id
+            editConclusionVC.patientId = self.patientID
+            self.navigationController?.show(editConclusionVC, sender: nil)
         }
         
     }

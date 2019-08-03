@@ -251,6 +251,55 @@
             </objects>
             <point key="canvasLocation" x="129" y="-563"/>
         </scene>
+        <!--Изменить заклчение-->
+        <scene sceneID="wV0-Lw-b9w">
+            <objects>
+                <viewController storyboardIdentifier="EditConclusionVC" title="Изменить заклчение" id="7m7-Pt-7dU" customClass="EditConclusionVC" customModule="MedicTerapevtNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kr-Fn-Yzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-SW-OsK">
+                                <rect key="frame" x="20" y="64" width="374" height="749"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.10024207746478873" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="heX-aT-Fwt">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="heX-aT-Fwt" firstAttribute="centerY" secondItem="5kr-Fn-Yzx" secondAttribute="centerY" id="GaB-jE-QGL"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="bottom" secondItem="IfS-km-LT6" secondAttribute="bottom" id="Gya-hh-1eZ"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="top" secondItem="IfS-km-LT6" secondAttribute="top" constant="20" id="H5g-AA-ghx"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="trailing" secondItem="IfS-km-LT6" secondAttribute="trailing" constant="-20" id="TWG-0m-Lxm"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="leading" secondItem="IfS-km-LT6" secondAttribute="leading" constant="20" id="onK-gf-WmR"/>
+                            <constraint firstItem="heX-aT-Fwt" firstAttribute="centerX" secondItem="5kr-Fn-Yzx" secondAttribute="centerX" id="uFX-Ob-uTw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IfS-km-LT6"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Изменить заключение" id="KGP-4a-bc6">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="2JY-QF-ouc">
+                            <connections>
+                                <action selector="SaveButTapped:" destination="7m7-Pt-7dU" id="5vM-vf-PlW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="heX-aT-Fwt" id="Gc4-qv-ach"/>
+                        <outlet property="textViewMain" destination="sUc-SW-OsK" id="LKm-xh-rhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhf-9Z-UwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="148.66071428571428"/>
+        </scene>
         <!--Позвоночник-->
         <scene sceneID="dS5-pb-Or0">
             <objects>
@@ -286,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKD-g5-7RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="149"/>
+            <point key="canvasLocation" x="1645" y="149"/>
         </scene>
         <!--Title-->
         <scene sceneID="gZq-Z8-SBt">

@@ -15,16 +15,19 @@ class DiagnosticInfo {
     var otherInfo: [OtherDiagnosticInfo]
     var conclusion: String
     var date: Date
+    var id: String
     
     init (backbone: [URL],
           otherInfo: [OtherDiagnosticInfo],
           conclusion: String,
-          date: Date) {
+          date: Date,
+          id: String) {
         
         self.backbone = backbone
         self.otherInfo = otherInfo
         self.conclusion = conclusion
         self.date = date
+        self.id = id
     }
     
 }

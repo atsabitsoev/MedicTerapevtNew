@@ -23,6 +23,7 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         let currentItem = patients[indexPath.row]
         cell.labName.text = currentItem.name
         cell.labDescribtion.text = currentItem.conclusion
+        cell.unreadMessages = self.unReadMessages[currentItem.id] ?? 0
         
         return cell
     }
@@ -45,6 +46,8 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
         chatVC.titleString = patients[indexPath.row].name
         chatVC.patient = patients[indexPath.row]
+        ChatService.standard.unReadMessages[patients[indexPath.row].id] = 0
+        self.showUnreadMessgages()
         self.navigationController?.show(chatVC, sender: nil)
     }
     

@@ -26,6 +26,7 @@ class ChatService {
             NotificationManager.post(.newMessage)
         }
     }
+    var unReadMessages: [String: Int] = [:]
     
     
     func startConnection() {
@@ -145,6 +146,10 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            self.unReadMessages[json["message"]["author"].stringValue] = self.unReadMessages[json["message"]["author"].stringValue] != nil ? self.unReadMessages[json["message"]["author"].stringValue]! + 1 : 1
+            
+            NotificationManager.post(.newUnreadMessage)
         }
         
         socket.on("messageListReceive") { (data, ack) in

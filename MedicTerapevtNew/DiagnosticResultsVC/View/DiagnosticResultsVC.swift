@@ -31,8 +31,12 @@ class DiagnosticResultsVC: UIViewController {
 
         addObservers()
         
-        DiagnosticService.standard.getDiagnosticInfoRequest(id: patientID)
         activityIndicator.startAnimating()
+        DiagnosticService.standard.getDiagnosticInfoRequest(id: patientID)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DiagnosticService.standard.getDiagnosticInfoRequest(id: patientID)
     }
     
     

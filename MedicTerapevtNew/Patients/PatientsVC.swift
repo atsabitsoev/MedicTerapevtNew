@@ -17,6 +17,7 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
     
     
     var patients: [PatientItem] = []
+    var unReadMessages: [String: Int] = [:]
     
 
     override func viewDidLoad() {
@@ -38,6 +39,10 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
                                                selector: #selector(updatePatientsList),
                                                name: NSNotification.Name(NotificationNames.getPatientsListRequestAnswered.rawValue),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showUnreadMessgages),
+                                               name: NSNotification.Name(NotificationNames.newUnreadMessage.rawValue),
+                                               object: nil)
     }
     
     
@@ -56,6 +61,12 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
         self.patients = PatientsListService.standard.masPatients!
         tableView.reloadData()
         activityIndicator.stopAnimating()
+    }
+    
+    @objc func showUnreadMessgages() {
+        
+        self.unReadMessages = ChatService.standard.unReadMessages
+        self.tableView.reloadData()
     }
     
     
