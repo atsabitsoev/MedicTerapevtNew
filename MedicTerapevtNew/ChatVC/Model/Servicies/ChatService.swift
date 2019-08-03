@@ -12,11 +12,14 @@ import SwiftyJSON
 
 class ChatService {
     
-    private init() {
+    init() {
         print("создал")
         startConnection()
     }
-    static let standard = ChatService()
+    static var standard: ChatService? = ChatService()
+    static func destroy() {
+        self.standard = nil
+    }
     
     
     private var connected = false
@@ -277,6 +280,7 @@ class ChatService {
         socket.off("messageListReceive")
         socket.off("newMessage")
         socket.off("error-pipe")
+        ChatService.destroy()
     }
 
 }

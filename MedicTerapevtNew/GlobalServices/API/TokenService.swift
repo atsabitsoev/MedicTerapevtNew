@@ -14,7 +14,21 @@ class TokenService {
     private init() {}
     static let standard = TokenService()
     
-    var token: String?
-    var id: String?
+    var token: String? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "token")
+        }
+        get {
+            return UserDefaults.standard.string(forKey: "token")
+        }
+    }
+    var id: String? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "id")
+        }
+        get {
+            return UserDefaults.standard.string(forKey: "id")
+        }
+    }
     
 }

@@ -27,7 +27,7 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
         self.tabBarController?.delegate = self
         
         addObservers()
-        ChatService.standard
+        ChatService.standard = ChatService()
         fetchPatients()
         tableView.reloadData()
     }
@@ -65,7 +65,7 @@ class PatientsVC: UIViewController, UITabBarControllerDelegate {
     
     @objc func showUnreadMessgages() {
         
-        self.unReadMessages = ChatService.standard.unReadMessages
+        self.unReadMessages = ChatService.standard!.unReadMessages
         self.tableView.reloadData()
     }
     

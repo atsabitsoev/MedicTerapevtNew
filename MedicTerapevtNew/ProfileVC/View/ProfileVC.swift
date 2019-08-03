@@ -115,6 +115,36 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
     }
     
     
+    private func showLogOutAlert() {
+        let alert = UIAlertController(title: "Вы уверены?",
+                                      message: "",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Выйти",
+                                     style: .default) { (action) in
+                                        self.logOut()
+        }
+        let cancelAction = UIAlertAction(title: "Отмена",
+                                         style: .cancel,
+                                         handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    private func logOut() {
+        
+        ChatService.standard!.stopConnection()
+        UserDefaults.standard.set(false, forKey: "userEntered")
+        let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "EnterVC")
+        self.present(loginVC,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    
     @IBAction func butSaveTapped(_ sender: UIButton) {
         
         profileService.profile?.name = tfName.text ?? ""
@@ -125,6 +155,8 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
     
     
     @IBAction func butLogOutTapped(_ sender: UIButton) {
+        
+        showLogOutAlert()
     }
     
     

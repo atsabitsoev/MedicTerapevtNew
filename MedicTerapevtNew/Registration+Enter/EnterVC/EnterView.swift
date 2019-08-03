@@ -75,6 +75,7 @@ class EnterView: UIViewController {
         
         let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
         let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTBController")
+        UserDefaults.standard.set(true, forKey: "userEntered")
         self.present(mainTabBarController, animated: true, completion: nil)
     }
     

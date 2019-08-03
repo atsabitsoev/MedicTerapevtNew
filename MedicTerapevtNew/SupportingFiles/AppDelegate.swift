@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let userEntered = UserDefaults.standard.bool(forKey: "userEntered")
+        
+        switch userEntered {
+        case true:
+            self.window?.rootViewController = UIStoryboard(name: "Registration+Enter", bundle: nil).instantiateViewController(withIdentifier: "MainTBController")
+        case false:
+            self.window?.rootViewController = UIStoryboard(name: "Registration+Enter", bundle: nil).instantiateViewController(withIdentifier: "EnterVC")
+        }
+
         return true
     }
 

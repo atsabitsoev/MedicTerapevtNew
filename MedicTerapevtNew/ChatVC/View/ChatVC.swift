@@ -42,7 +42,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var bottomSafeArea: CGFloat = 0
     
     
-    private var chatService = ChatService.standard
+    private var chatService = ChatService.standard!
     var firstInit = true
     var allMessagesGot = false
     

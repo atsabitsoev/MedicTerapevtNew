@@ -46,7 +46,7 @@ extension PatientsVC: UITableViewDelegate, UITableViewDataSource {
         let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
         chatVC.titleString = patients[indexPath.row].name
         chatVC.patient = patients[indexPath.row]
-        ChatService.standard.unReadMessages[patients[indexPath.row].id] = 0
+        ChatService.standard!.unReadMessages[patients[indexPath.row].id] = 0
         self.showUnreadMessgages()
         self.navigationController?.show(chatVC, sender: nil)
     }
