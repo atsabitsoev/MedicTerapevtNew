@@ -133,8 +133,10 @@ class ExcercisesVC: UIViewController {
                                      handler: nil)
         alert.addAction(okAction)
         self.present(alert,
-                     animated: true,
-                     completion: nil)
+                     animated: true) {
+                        self.getExercisesService.sendGetAllExercisesRequest()
+                        self.getExercisesService.sendGetPatientExercisesRequest(id: self.patientID)
+        }
     }
     
     

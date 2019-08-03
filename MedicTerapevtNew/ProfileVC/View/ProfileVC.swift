@@ -24,6 +24,7 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         addObservers()
+        addRecognizer()
         profileService.getProfile()
     }
     
@@ -47,6 +48,17 @@ class ProfileVC: UIViewController, UITabBarControllerDelegate {
                                                object: nil)
     }
     
+    
+    private func addRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    
+    @objc private func hideKeyboard() {
+        self.view.endEditing(true)
+    }
     
     @objc private func profileGot() {
         
