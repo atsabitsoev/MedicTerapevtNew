@@ -16,7 +16,7 @@ class ChatService {
         print("создал")
         startConnection()
     }
-    static var standard: ChatService? = ChatService()
+    static var standard: ChatService?
     static func destroy() {
         self.standard = nil
     }
