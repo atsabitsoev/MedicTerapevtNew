@@ -27,6 +27,10 @@ class EditConclusionVC: UIViewController {
         addObservers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
     
     private func addObservers() {
         
@@ -54,6 +58,15 @@ class EditConclusionVC: UIViewController {
         }
         
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            textViewMain.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+        }
     }
     
     
