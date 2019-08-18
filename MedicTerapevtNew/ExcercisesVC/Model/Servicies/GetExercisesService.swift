@@ -29,7 +29,7 @@ class GetExercisesService {
     
     func sendGetAllExercisesRequest() {
         
-        let url = "\(ApiInfo().baseUrl)/exercise"
+        let url = "\(ApiInfo().baseUrl)/exercise?limit=100"
         print("token - \(TokenService.standard.token!)")
         let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
      
@@ -79,7 +79,7 @@ class GetExercisesService {
     func sendGetPatientExercisesRequest(id: String) {
         
         
-        let url = "\(ApiInfo().baseUrl)/patient/\(id)/exercise"
+        let url = "\(ApiInfo().baseUrl)/patient/\(id)/exercise?limit=100"
         let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
         
         AF.request(url,
