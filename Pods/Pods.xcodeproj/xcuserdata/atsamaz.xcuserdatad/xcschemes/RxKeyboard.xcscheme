@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B6E6479E3D6D3C2D1E04AAEE23BFD5A0"
+               BlueprintIdentifier = "5DF28996554E96DEF9632C88BFE6CEDC"
                BuildableName = "RxKeyboard.framework"
                BlueprintName = "RxKeyboard"
                ReferencedContainer = "container:Pods.xcodeproj">
